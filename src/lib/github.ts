@@ -157,8 +157,7 @@ export function buildContributionBoard(activity: ActivityBucket[]): Contribution
     const date = new Date(`${bucket.date}T00:00:00`);
     const isFirstWeekOfMonth =
       dayIndex === 0 &&
-      (!activity[index - 7] ||
-        new Date(`${activity[index - 7].date}T00:00:00`).getMonth() !== date.getMonth());
+      (!activity[index - 7] || new Date(`${activity[index - 7].date}T00:00:00`).getMonth() !== date.getMonth());
 
     if (isFirstWeekOfMonth) {
       monthLabels.push({
