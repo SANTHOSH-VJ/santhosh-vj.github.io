@@ -22,7 +22,7 @@ export function Hero() {
           className="mx-auto mb-6 flex w-fit items-center gap-2 rounded-full border border-border bg-card/50 px-3 py-1 text-xs text-muted-foreground backdrop-blur"
         >
           <Sparkles className="h-3.5 w-3.5 text-accent" />
-          Available for full-time SDE opportunities — 2026
+          Available for full-time SDE opportunities — let's connect!
         </motion.div>
 
         <motion.h1

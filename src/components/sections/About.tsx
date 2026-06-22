@@ -6,12 +6,12 @@ const CARDS = [
   {
     icon: GraduationCap,
     title: "Education",
-    body: "B.Tech in Computer Science with a specialization in Cloud Computing. Strong fundamentals in DSA, OS, and distributed systems.",
+    body: "B.E in Computer Science with a specialization in Cloud Computing at R.M.D. Engineering College. Strong fundamentals in DSA, Problem Solving, and AWS Cloud.",
   },
   {
     icon: Briefcase,
     title: "Current Internship",
-    body: "AI Intern at Shell — building tooling and pipelines that accelerate internal engineering workflows.",
+    body: "Software Intern at Ziffity — building tooling and pipelines that accelerate internal engineering workflows.",
   },
   {
     icon: Rocket,

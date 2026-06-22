@@ -8,10 +8,7 @@ export function Certifications() {
   return (
     <section id="certifications" className="relative py-24">
       <div className="mx-auto max-w-6xl px-6">
-        <SectionHeading
-          eyebrow="Certifications"
-          title="Verified credentials"
-        />
+        <SectionHeading eyebrow="Certifications" title="Verified credentials" />
         <div className="grid gap-4 sm:grid-cols-2">
           {CERTIFICATIONS.map((c, i) => (
             <motion.div
@@ -24,18 +21,31 @@ export function Certifications() {
             >
               <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-gradient-to-br from-primary/20 to-accent/10 blur-2xl transition-opacity group-hover:opacity-100" />
               <div className="relative flex items-start gap-4">
-                <div className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 text-primary">
-                  <Award className="h-6 w-6" />
+                <div className="grid h-14 w-14 shrink-0 place-items-center overflow-hidden rounded-xl border border-border bg-background/60 text-primary">
+                  {c.badgeUrl && c.badgeUrl !== "#" ? (
+                    <img
+                      src={c.badgeUrl}
+                      alt={`${c.name} badge`}
+                      className="h-full w-full object-cover"
+                    />
+                  ) : (
+                    <Award className="h-6 w-6" />
+                  )}
                 </div>
                 <div className="min-w-0 flex-1">
                   <h3 className="font-display font-semibold">{c.name}</h3>
-                  <p className="mt-1 text-sm text-muted-foreground">{c.issuer} · {c.year}</p>
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    {c.issuer} · {c.year}
+                  </p>
                   <div className="mt-4 flex flex-wrap items-center gap-2">
                     <span className="inline-flex items-center gap-1 rounded-full bg-primary/10 px-2 py-0.5 text-xs text-primary">
                       <CheckCircle2 className="h-3 w-3" /> Verified
                     </span>
-                    <Button size="sm" variant="outline" className="ml-auto">
-                      <ExternalLink className="mr-1.5 h-3.5 w-3.5" />Credential
+                    <Button size="sm" variant="outline" className="ml-auto" asChild>
+                      <a href={c.credentialUrl ?? "#"} target="_blank" rel="noreferrer">
+                        <ExternalLink className="mr-1.5 h-3.5 w-3.5" />
+                        Credential
+                      </a>
                     </Button>
                   </div>
                 </div>

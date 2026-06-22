@@ -5,17 +5,17 @@ import { Button } from "@/components/ui/button";
 import { PROFILE } from "@/constants/portfolio";
 
 const STATS = [
-  { icon: Users, label: "Followers", value: "120+" },
-  { icon: Star, label: "Stars", value: "85" },
-  { icon: GitBranch, label: "Repositories", value: "32" },
-  { icon: GitCommit, label: "Commits", value: "1.2k+" },
+  { icon: Users, label: "Followers", value: "3" },
+  { icon: Star, label: "Stars", value: "7" },
+  { icon: GitBranch, label: "Repositories", value: "20" },
+  { icon: GitCommit, label: "Commits", value: "200+" },
 ];
 
 const REPOS = [
-  { name: "serverless-cloud-storage", desc: "Cognito + S3 + Lambda storage platform", lang: "TypeScript", stars: 24 },
-  { name: "url-shortener-saas", desc: "Flask + MySQL shortener with analytics", lang: "Python", stars: 18 },
-  { name: "aws-playground", desc: "Experiments with AWS services and IaC", lang: "Python", stars: 12 },
-  { name: "dsa-java", desc: "1100+ solved problems, organized by topic", lang: "Java", stars: 9 },
+  { name: "serverless-cloud-storage", desc: "Cognito + S3 + Lambda storage platform", lang: "Python", stars: 2 },
+  { name: "url-shortener-saas", desc: "Flask + MySQL shortener with analytics", lang: "Python", stars: 1 },
+  { name: "aws-playground", desc: "Experiments with AWS services and IaC", lang: "Python", stars: 1 },
+  { name: "problem-solving-playbook", desc: "Solved problems, organized by topic", lang: "Java", stars: 2 },
 ];
 
 // Deterministic pseudo-random so SSR/CSR match

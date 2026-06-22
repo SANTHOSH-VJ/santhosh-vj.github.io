@@ -49,7 +49,7 @@ export function Navbar() {
           <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-primary to-accent text-sm text-primary-foreground">
             SV
           </span>
-          <span className="hidden sm:block">Santhosh<span className="text-primary">.</span></span>
+          <span className="hidden sm:block">SANTHOSH V<span className="text-primary">.</span></span>
         </a>
 
         <nav className="hidden items-center gap-1 lg:flex">
