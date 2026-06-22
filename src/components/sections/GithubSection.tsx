@@ -1,115 +1,79 @@
-import { motion } from "framer-motion";
-import { GitBranch, GitCommit, Github, Star, Users } from "lucide-react";
+import { AlertTriangle, Github, RefreshCw } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
 import { Button } from "@/components/ui/button";
+import { useGitHubDashboard } from "@/hooks/use-github";
 import { PROFILE } from "@/constants/portfolio";
-
-const STATS = [
-  { icon: Users, label: "Followers", value: "3" },
-  { icon: Star, label: "Stars", value: "7" },
-  { icon: GitBranch, label: "Repositories", value: "20" },
-  { icon: GitCommit, label: "Commits", value: "200+" },
-];
-
-const REPOS = [
-  { name: "serverless-cloud-storage", desc: "Cognito + S3 + Lambda storage platform", lang: "Python", stars: 2 },
-  { name: "url-shortener-saas", desc: "Flask + MySQL shortener with analytics", lang: "Python", stars: 1 },
-  { name: "aws-playground", desc: "Experiments with AWS services and IaC", lang: "Python", stars: 1 },
-  { name: "problem-solving-playbook", desc: "Solved problems, organized by topic", lang: "Java", stars: 2 },
-];
-
-// Deterministic pseudo-random so SSR/CSR match
-function levelFor(i: number) {
-  const x = Math.sin(i * 9.13) * 10000;
-  const f = x - Math.floor(x);
-  return Math.floor(f * 5);
-}
-
-function Heatmap() {
-  const cells = Array.from({ length: 7 * 26 });
-  const palette = ["bg-muted/40", "bg-primary/20", "bg-primary/40", "bg-primary/70", "bg-accent"];
-  return (
-    <div className="grid grid-flow-col grid-rows-7 gap-[3px] overflow-x-auto">
-      {cells.map((_, i) => (
-        <div key={i} className={`h-2.5 w-2.5 rounded-sm ${palette[levelFor(i)]}`} />
-      ))}
-    </div>
-  );
-}
+import { selectFeaturedRepos } from "@/lib/github";
+import { GitHubProfile } from "@/components/github/GitHubProfile";
+import { GitHubStats } from "@/components/github/GitHubStats";
+import { ContributionGraph } from "@/components/github/ContributionGraph";
+import { PinnedRepos } from "@/components/github/PinnedRepos";
+import { GitHubSectionSkeleton } from "@/components/github/GitHubSectionSkeleton";
 
 export function GithubSection() {
+  const { data, isLoading, isError, error, refetch, isFetching } = useGitHubDashboard();
+
+  const featuredRepos = data ? selectFeaturedRepos(data.repos) : [];
+
   return (
     <section id="github" className="relative py-24">
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
           eyebrow="GitHub"
-          title="Open source & activity"
-          description="A live look at what I'm building in public."
+          title="Live GitHub data"
+          description="A dynamic view of my profile, recent activity, and featured repositories."
         />
 
-        <div className="mb-6 grid grid-cols-2 gap-3 md:grid-cols-4">
-          {STATS.map((s, i) => (
-            <motion.div
-              key={s.label}
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.05 }}
-              className="rounded-2xl border border-border bg-card p-4"
-            >
-              <s.icon className="mb-2 h-4 w-4 text-accent" />
-              <div className="text-2xl font-bold">{s.value}</div>
-              <div className="text-xs text-muted-foreground">{s.label}</div>
-            </motion.div>
-          ))}
-        </div>
+        {isLoading && <GitHubSectionSkeleton />}
 
-        <motion.div
-          initial={{ opacity: 0, y: 14 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="rounded-2xl border border-border bg-card p-6"
-        >
-          <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
-            <h3 className="font-display font-semibold">Contribution activity</h3>
-            <Button size="sm" variant="outline" asChild>
-              <a href={PROFILE.github} target="_blank" rel="noreferrer">
-                <Github className="mr-1.5 h-3.5 w-3.5" />View on GitHub
-              </a>
-            </Button>
+        {isError && (
+          <div className="rounded-3xl border border-border bg-card p-6 shadow-[var(--shadow-elevated)]">
+            <div className="flex flex-wrap items-start justify-between gap-4">
+              <div className="flex items-start gap-3">
+                <div className="grid h-10 w-10 place-items-center rounded-xl bg-destructive/10 text-destructive">
+                  <AlertTriangle className="h-5 w-5" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground">Unable to load GitHub data</h3>
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    {error instanceof Error
+                      ? error.message
+                      : "Something went wrong while fetching GitHub data."}
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                <Button variant="outline" onClick={() => refetch()}>
+                  <RefreshCw className={`mr-1.5 h-3.5 w-3.5 ${isFetching ? "animate-spin" : ""}`} />
+                  Retry
+                </Button>
+                <Button
+                  asChild
+                  className="bg-gradient-to-r from-primary to-accent text-primary-foreground"
+                >
+                  <a href={PROFILE.github} target="_blank" rel="noreferrer">
+                    <Github className="mr-1.5 h-3.5 w-3.5" />
+                    Open GitHub
+                  </a>
+                </Button>
+              </div>
+            </div>
           </div>
-          <Heatmap />
-        </motion.div>
+        )}
 
-        <div className="mt-6 grid gap-4 sm:grid-cols-2">
-          {REPOS.map((r, i) => (
-            <motion.a
-              key={r.name}
-              href={PROFILE.github}
-              target="_blank"
-              rel="noreferrer"
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.05 }}
-              className="group rounded-2xl border border-border bg-card p-5 transition-all hover:-translate-y-0.5 hover:border-primary/40"
-            >
-              <div className="flex items-center justify-between">
-                <h4 className="font-mono text-sm font-semibold text-primary group-hover:underline">
-                  {r.name}
-                </h4>
-                <span className="flex items-center gap-1 text-xs text-muted-foreground">
-                  <Star className="h-3 w-3" />{r.stars}
-                </span>
-              </div>
-              <p className="mt-2 text-sm text-muted-foreground">{r.desc}</p>
-              <div className="mt-3 flex items-center gap-2 text-xs text-muted-foreground">
-                <span className="h-2 w-2 rounded-full bg-accent" />
-                {r.lang}
-              </div>
-            </motion.a>
-          ))}
-        </div>
+        {data && !isError && (
+          <div className="grid gap-6 xl:grid-cols-[0.9fr_1.1fr]">
+            <div className="space-y-6">
+              <GitHubProfile profile={data.profile} />
+              <GitHubStats profile={data.profile} repos={data.repos} />
+            </div>
+
+            <div className="space-y-6">
+              <ContributionGraph activity={data.activity} />
+              <PinnedRepos repos={featuredRepos} />
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

@@ -1,10 +1,13 @@
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
-import { ArrowRight, Download, Mail, Sparkles } from "lucide-react";
+import { ArrowRight, Download, GitBranch, Mail, Sparkles, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { FLOATING_TECH, PROFILE, TYPING_ROLES } from "@/constants/portfolio";
+import { useGitHubDashboard } from "@/hooks/use-github";
 
 export function Hero() {
+  const { data } = useGitHubDashboard();
+
   return (
     <section id="home" className="relative overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-28">
       {/* background */}
@@ -65,16 +68,46 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.45 }}
           className="mt-10 flex flex-wrap justify-center gap-3"
         >
-          <Button size="lg" asChild className="bg-gradient-to-r from-primary to-accent text-primary-foreground glow-ring hover:opacity-90">
-            <a href="#projects">View Projects <ArrowRight className="ml-2 h-4 w-4" /></a>
+          <Button
+            size="lg"
+            asChild
+            className="bg-gradient-to-r from-primary to-accent text-primary-foreground glow-ring hover:opacity-90"
+          >
+            <a href="#projects">
+              View Projects <ArrowRight className="ml-2 h-4 w-4" />
+            </a>
           </Button>
           <Button size="lg" variant="outline" asChild>
-            <a href={PROFILE.resumeUrl} download><Download className="mr-2 h-4 w-4" />Download Resume</a>
+            <a href={PROFILE.resumeUrl} download>
+              <Download className="mr-2 h-4 w-4" />
+              Download Resume
+            </a>
           </Button>
           <Button size="lg" variant="ghost" asChild>
-            <a href="#contact"><Mail className="mr-2 h-4 w-4" />Contact Me</a>
+            <a href="#contact">
+              <Mail className="mr-2 h-4 w-4" />
+              Contact Me
+            </a>
           </Button>
         </motion.div>
+
+        {data && (
+          <motion.div
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.55 }}
+            className="mx-auto mt-6 flex w-fit flex-wrap items-center justify-center gap-3 rounded-full border border-border bg-card/60 px-4 py-2 text-xs text-muted-foreground backdrop-blur"
+          >
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-primary">
+              <Users className="h-3.5 w-3.5" />
+              {data.profile.followers} followers
+            </span>
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-accent/10 px-3 py-1 text-accent">
+              <GitBranch className="h-3.5 w-3.5" />
+              {data.profile.public_repos} public repos
+            </span>
+          </motion.div>
+        )}
 
         {/* floating tech badges */}
         <div className="mt-16 flex flex-wrap justify-center gap-3">
