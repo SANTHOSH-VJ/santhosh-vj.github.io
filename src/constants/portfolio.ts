@@ -6,7 +6,7 @@ export const PROFILE = {
   location: "India",
   github: "https://github.com/SANTHOSH-VJ",
   linkedin: "https://www.linkedin.com/in/santhosh-v-146b58293/",
-  resumeUrl: "https://drive.google.com/file/d/1rEKi2FwyseXhPayQs4p0W15QSN4TeuBx/view?usp=sharing",
+  resumeUrl: "https://drive.google.com/file/d/1Q_C8Cgv6f4toyGavBhpti90rGVOm6zNn/view?usp=sharing",
   bio: "Passionate in Cloud Computing and software developer focused on building reliable, scalable systems on AWS.",
 };
 
