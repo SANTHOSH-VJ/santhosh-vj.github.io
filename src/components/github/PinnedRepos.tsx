@@ -15,13 +15,7 @@ export function PinnedRepos({ repos }: Props) {
       transition={{ duration: 0.45 }}
       className="rounded-3xl border border-border bg-card p-6 shadow-[var(--shadow-elevated)]"
     >
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <div>
-          <p className="font-mono text-xs uppercase tracking-[0.22em] text-accent">
-            Featured repositories
-          </p>
-          <h3 className="mt-2 text-xl font-semibold text-foreground">Latest updated projects</h3>
-        </div>
+      <div className="flex justify-end">
         <span className="rounded-full border border-border bg-background/60 px-3 py-1 font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
           {repos.length} repos
         </span>

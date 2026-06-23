@@ -3,17 +3,17 @@ import { SectionHeading } from "./SectionHeading";
 import { Button } from "@/components/ui/button";
 import { useGitHubDashboard } from "@/hooks/use-github";
 import { PROFILE } from "@/constants/portfolio";
-import { selectFeaturedRepos } from "@/lib/github";
+
 import { GitHubProfile } from "@/components/github/GitHubProfile";
 import { GitHubStats } from "@/components/github/GitHubStats";
 import { ContributionGraph } from "@/components/github/ContributionGraph";
-import { PinnedRepos } from "@/components/github/PinnedRepos";
+
 import { GitHubSectionSkeleton } from "@/components/github/GitHubSectionSkeleton";
 
 export function GithubSection() {
   const { data, isLoading, isError, error, refetch, isFetching } = useGitHubDashboard();
 
-  const featuredRepos = data ? selectFeaturedRepos(data.repos) : [];
+
 
   return (
     <section id="github" className="relative py-24">
@@ -70,7 +70,7 @@ export function GithubSection() {
 
             <div className="space-y-6">
               <ContributionGraph activity={data.activity} />
-              <PinnedRepos repos={featuredRepos} />
+
             </div>
           </div>
         )}

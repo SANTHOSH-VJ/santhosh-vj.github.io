@@ -35,10 +35,16 @@ export interface GitHubRepo {
   archived: boolean;
 }
 
-export interface GitHubEvent {
-  id: string;
-  type: string;
-  created_at: string;
+export interface GitHubContributionsResponse {
+  totalContributions: number;
+  contributions: Array<
+    Array<{
+      color: string;
+      contributionCount: number;
+      contributionLevel: string;
+      date: string;
+    }>
+  >;
 }
 
 export interface ActivityBucket {
@@ -96,42 +102,45 @@ export async function fetchGitHubRepos() {
     });
 }
 
-export async function fetchGitHubActivity() {
-  return fetchGitHubJson<GitHubEvent[]>(`/users/${GITHUB_USERNAME}/events/public?per_page=100`);
+export async function fetchGitHubActivity(): Promise<ActivityBucket[]> {
+  try {
+    const response = await fetch(`https://github-contributions-api.deno.dev/${GITHUB_USERNAME}.json`);
+    if (!response.ok) {
+      return [];
+    }
+    const data = (await response.json()) as GitHubContributionsResponse;
+
+    const buckets: ActivityBucket[] = [];
+    data.contributions.forEach((week) => {
+      week.forEach((day) => {
+        let level: 0 | 1 | 2 | 3 | 4 = 0;
+        if (day.contributionLevel === "FIRST_QUARTILE") level = 1;
+        else if (day.contributionLevel === "SECOND_QUARTILE") level = 2;
+        else if (day.contributionLevel === "THIRD_QUARTILE") level = 3;
+        else if (day.contributionLevel === "FOURTH_QUARTILE") level = 4;
+
+        buckets.push({
+          date: day.date,
+          count: day.contributionCount,
+          level,
+        });
+      });
+    });
+
+    return buckets;
+  } catch (error) {
+    console.error("Error fetching GitHub activity:", error);
+    return [];
+  }
 }
 
 export function selectFeaturedRepos(repos: GitHubRepo[], limit = 6) {
   return repos.filter((repo) => !repo.fork && !repo.archived).slice(0, limit);
 }
 
-export function buildActivityBuckets(events: GitHubEvent[], days = 371): ActivityBucket[] {
-  const countsByDate = new Map<string, number>();
-
-  events.forEach((event) => {
-    const dateKey = event.created_at.slice(0, 10);
-    countsByDate.set(dateKey, (countsByDate.get(dateKey) ?? 0) + 1);
-  });
-
-  const today = startOfDay(new Date());
-
-  return Array.from({ length: days }, (_, index) => {
-    const offset = days - index - 1;
-    const date = subDays(today, offset);
-    const dateKey = format(date, "yyyy-MM-dd");
-    const count = countsByDate.get(dateKey) ?? 0;
-
-    let level: 0 | 1 | 2 | 3 | 4 = 0;
-    if (count === 1) level = 1;
-    else if (count === 2) level = 2;
-    else if (count === 3) level = 3;
-    else if (count >= 4) level = 4;
-
-    return {
-      date: dateKey,
-      count,
-      level,
-    };
-  });
+export function buildActivityBuckets(events: any[], days = 371): ActivityBucket[] {
+  // Kept for backward compatibility if needed elsewhere, though not used anymore
+  return [];
 }
 
 export function buildContributionBoard(activity: ActivityBucket[]): ContributionBoard {
@@ -201,6 +210,6 @@ export async function fetchGitHubDashboard(): Promise<GitHubDashboardData> {
   return {
     profile,
     repos,
-    activity: buildActivityBuckets(activity),
+    activity,
   };
 }
