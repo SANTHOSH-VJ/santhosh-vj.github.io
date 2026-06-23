@@ -41,8 +41,8 @@ export function ContributionGraph({ activity }: Props) {
         </a>
       </div>
 
-      <div className="mt-6 rounded-3xl border border-border/70 bg-[#0d1117] p-4">
-        <div className="grid grid-cols-[2.5rem_1fr] gap-3">
+      <div className="mt-6 overflow-x-auto rounded-3xl border border-border/70 bg-[#0d1117] p-4">
+        <div className="min-w-[750px] grid grid-cols-[2.5rem_1fr] gap-3">
           <div className="h-5" />
           <div className="mb-2 grid grid-cols-[repeat(53,minmax(0,1fr))] gap-1 text-xs text-muted-foreground">
             {board.monthLabels.map((month) => (
