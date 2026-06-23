@@ -3,14 +3,14 @@ import { n as require_react } from "../_libs/@radix-ui/react-compose-refs+[...].
 import { i as require_jsx_runtime, n as Slot, t as Root } from "../_libs/@radix-ui/react-label+[...].mjs";
 import { t as useQuery } from "../_libs/tanstack__react-query.mjs";
 import { n as toast, t as Toaster } from "../_libs/sonner.mjs";
-import { n as motion, t as useInView } from "../_libs/framer-motion.mjs";
-import { A as ChevronDown, C as ExternalLink, D as Coffee, E as Cpu, F as Award, I as Atom, L as ArrowRight, M as Briefcase, N as Braces, O as Cloud, P as Bot, S as GitBranch, T as Database, _ as Mail, a as Trophy, b as GraduationCap, c as Star, d as Send, f as Rocket, g as MapPin, h as Menu, i as UserRound, j as Building2, k as CircleCheck, l as SquareTerminal, m as Phone, n as Workflow, o as TriangleAlert, p as RefreshCw, r as Users, s as Target, t as X, u as Sparkles, v as Linkedin, w as Download, x as Github, y as Layers } from "../_libs/lucide-react.mjs";
+import { n as motion, r as AnimatePresence, t as useInView } from "../_libs/framer-motion.mjs";
+import { A as ChevronRight, C as ExternalLink, D as Coffee, E as Cpu, F as Bot, I as Award, L as Atom, M as Building2, N as Briefcase, O as Cloud, P as Braces, R as ArrowRight, S as GitBranch, T as Database, _ as Mail, a as Trophy, b as GraduationCap, c as Star, d as Send, f as Rocket, g as MapPin, h as Menu, i as UserRound, j as ChevronDown, k as CircleCheck, l as SquareTerminal, m as Phone, n as Workflow, o as TriangleAlert, p as RefreshCw, r as Users, s as Target, t as X, u as Sparkles, v as Linkedin, w as Download, x as Github, y as Layers } from "../_libs/lucide-react.mjs";
 import { n as clsx, t as cva } from "../_libs/class-variance-authority+clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
 import { t as m } from "../_libs/react-type-animation.mjs";
 import { t as format } from "../_libs/date-fns.mjs";
 import { n as stringType, t as objectType } from "../_libs/zod.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-yKFDRRUE.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-GPqPraHc.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var Toaster$1 = ({ ...props }) => {
@@ -902,88 +902,208 @@ function About() {
 		})
 	});
 }
+var darkenColor = (hex, percent) => {
+	let color = hex.startsWith("#") ? hex.slice(1) : hex;
+	if (color.length === 3) color = color.split("").map((c) => c + c).join("");
+	const num = parseInt(color, 16);
+	let r = num >> 16 & 255;
+	let g = num >> 8 & 255;
+	let b = num & 255;
+	r = Math.max(0, Math.min(255, Math.floor(r * (1 - percent))));
+	g = Math.max(0, Math.min(255, Math.floor(g * (1 - percent))));
+	b = Math.max(0, Math.min(255, Math.floor(b * (1 - percent))));
+	return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1).toUpperCase();
+};
+var Folder = ({ color = "#5227FF", size = 1, items = [], className = "" }) => {
+	const maxItems = 3;
+	const papers = items.slice(0, maxItems);
+	while (papers.length < maxItems) papers.push(null);
+	const [open, setOpen] = (0, import_react.useState)(false);
+	const [paperOffsets, setPaperOffsets] = (0, import_react.useState)(Array.from({ length: maxItems }, () => ({
+		x: 0,
+		y: 0
+	})));
+	const folderBackColor = darkenColor(color, .08);
+	const paper1 = darkenColor("#ffffff", .1);
+	const paper2 = darkenColor("#ffffff", .05);
+	const paper3 = "#ffffff";
+	const handleClick = () => {
+		setOpen((prev) => !prev);
+		if (open) setPaperOffsets(Array.from({ length: maxItems }, () => ({
+			x: 0,
+			y: 0
+		})));
+	};
+	const handlePaperMouseMove = (e, index) => {
+		if (!open) return;
+		const rect = e.currentTarget.getBoundingClientRect();
+		const centerX = rect.left + rect.width / 2;
+		const centerY = rect.top + rect.height / 2;
+		const offsetX = (e.clientX - centerX) * .15;
+		const offsetY = (e.clientY - centerY) * .15;
+		setPaperOffsets((prev) => {
+			const newOffsets = [...prev];
+			newOffsets[index] = {
+				x: offsetX,
+				y: offsetY
+			};
+			return newOffsets;
+		});
+	};
+	const handlePaperMouseLeave = (_e, index) => {
+		setPaperOffsets((prev) => {
+			const newOffsets = [...prev];
+			newOffsets[index] = {
+				x: 0,
+				y: 0
+			};
+			return newOffsets;
+		});
+	};
+	const folderStyle = {
+		"--folder-color": color,
+		"--folder-back-color": folderBackColor,
+		"--paper-1": paper1,
+		"--paper-2": paper2,
+		"--paper-3": paper3
+	};
+	const folderClassName = `folder ${open ? "open" : ""}`.trim();
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+		style: { transform: `scale(${size})` },
+		className,
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			className: folderClassName,
+			style: folderStyle,
+			onClick: handleClick,
+			onKeyDown: (e) => {
+				if (e.key === "Enter" || e.key === " ") {
+					e.preventDefault();
+					handleClick();
+				}
+			},
+			tabIndex: 0,
+			role: "button",
+			"aria-expanded": open,
+			"aria-label": open ? "Close folder" : "Open folder",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "folder__back",
+				children: [
+					papers.map((item, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: `paper paper-${i + 1}`,
+						onMouseMove: (e) => handlePaperMouseMove(e, i),
+						onMouseLeave: (e) => handlePaperMouseLeave(e, i),
+						style: open ? {
+							"--magnet-x": `${paperOffsets[i]?.x || 0}px`,
+							"--magnet-y": `${paperOffsets[i]?.y || 0}px`
+						} : {},
+						children: item
+					}, i)),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "folder__front" }),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "folder__front right" })
+				]
+			})
+		})
+	});
+};
 var CATEGORY_META = {
 	Programming: {
 		icon: Braces,
-		summary: "Core languages and problem-solving foundations."
+		summary: "Core languages and problem-solving foundations.",
+		color: "#F59E0B"
 	},
 	Cloud: {
 		icon: Cloud,
-		summary: "Cloud platforms, infra tooling, and delivery-ready environments."
+		summary: "Cloud platforms, infra tooling, and delivery-ready environments.",
+		color: "#3B82F6"
 	},
 	"DevOps & Tools": {
 		icon: Workflow,
-		summary: "Version control, delivery workflows, and productivity tooling."
+		summary: "Version control, delivery workflows, and productivity tooling.",
+		color: "#EF4444"
 	},
 	"AI-Assisted Dev": {
 		icon: Sparkles,
-		summary: "AI tools that speed up drafting, debugging, and iteration."
+		summary: "AI tools that speed up drafting, debugging, and iteration.",
+		color: "#8B5CF6"
 	}
 };
 var SKILL_META = {
 	Java: {
 		icon: Coffee,
 		accent: "from-amber-500/25 to-orange-500/10 text-amber-400",
+		gradient: "from-amber-500 to-orange-500",
 		note: "Reliable for backend logic, interviews, and DSA practice."
 	},
 	Python: {
 		icon: Atom,
 		accent: "from-sky-500/25 to-cyan-500/10 text-sky-400",
+		gradient: "from-sky-500 to-cyan-500",
 		note: "Used for scripting, automation, and fast prototyping."
 	},
 	SQL: {
 		icon: Database,
 		accent: "from-emerald-500/25 to-teal-500/10 text-emerald-400",
+		gradient: "from-emerald-500 to-teal-500",
 		note: "Comfortable with queries, joins, and structured data work."
 	},
 	AWS: {
 		icon: Cloud,
 		accent: "from-orange-500/25 to-amber-500/10 text-orange-400",
+		gradient: "from-orange-500 to-amber-500",
 		note: "Hands-on exposure to AWS Cloud architecture and services."
 	},
 	OCI: {
 		icon: Cpu,
 		accent: "from-rose-500/25 to-red-500/10 text-rose-400",
+		gradient: "from-rose-500 to-red-500",
 		note: "Basic familiarity with Oracle Cloud and its core services."
 	},
 	Linux: {
 		icon: SquareTerminal,
 		accent: "from-zinc-500/25 to-slate-500/10 text-zinc-300",
+		gradient: "from-zinc-400 to-slate-500",
 		note: "Daily terminal comfort for servers, scripts, and debugging."
 	},
 	Docker: {
 		icon: Layers,
 		accent: "from-cyan-500/25 to-blue-500/10 text-cyan-400",
+		gradient: "from-cyan-500 to-blue-500",
 		note: "Containerization for repeatable local and cloud deployments."
 	},
 	Git: {
 		icon: GitBranch,
 		accent: "from-red-500/25 to-orange-500/10 text-red-400",
+		gradient: "from-red-500 to-orange-500",
 		note: "Branching, collaboration, and clean commit hygiene."
 	},
 	GitHub: {
 		icon: Github,
 		accent: "from-slate-500/25 to-zinc-500/10 text-slate-200",
+		gradient: "from-slate-400 to-zinc-500",
 		note: "Source control, collaboration, and portfolio delivery."
 	},
 	Postman: {
 		icon: Send,
 		accent: "from-orange-500/25 to-rose-500/10 text-orange-300",
+		gradient: "from-orange-500 to-rose-500",
 		note: "API exploration, request testing, and documentation flow."
 	},
 	"GitHub Copilot": {
 		icon: Sparkles,
 		accent: "from-violet-500/25 to-fuchsia-500/10 text-violet-300",
+		gradient: "from-violet-500 to-fuchsia-500",
 		note: "AI-assisted completion while keeping the code intentional."
 	},
 	Claude: {
 		icon: Bot,
 		accent: "from-stone-500/25 to-neutral-500/10 text-stone-200",
+		gradient: "from-stone-400 to-neutral-500",
 		note: "Used for reasoning, drafting, and reviewing implementation choices."
 	},
 	Kiro: {
 		icon: Workflow,
 		accent: "from-indigo-500/25 to-blue-500/10 text-indigo-300",
+		gradient: "from-indigo-500 to-blue-500",
 		note: "Workflow support for planning, refinement, and iteration."
 	}
 };
@@ -995,7 +1115,62 @@ var FEATURED_STACK = [
 	"SQL",
 	"Git"
 ];
+function SkillCard({ name, delay }) {
+	const meta = SKILL_META[name] ?? {
+		icon: Braces,
+		accent: "from-primary/20 to-accent/10 text-primary",
+		gradient: "from-primary to-accent",
+		note: "Core skill used in day-to-day engineering work."
+	};
+	const SkillIcon = meta.icon;
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
+		initial: {
+			opacity: 0,
+			y: 16,
+			scale: .95
+		},
+		animate: {
+			opacity: 1,
+			y: 0,
+			scale: 1
+		},
+		exit: {
+			opacity: 0,
+			y: -10,
+			scale: .95
+		},
+		transition: {
+			duration: .35,
+			delay: delay * .07
+		},
+		className: "group relative overflow-visible rounded-2xl border border-border/60 bg-background/60 p-5 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_0_30px_-8px_rgba(99,102,241,0.3)]",
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pointer-events-none absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" }),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "flex items-center gap-4",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: `relative grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-gradient-to-br ${meta.accent} transition-transform duration-300 group-hover:scale-110`,
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SkillIcon, { className: "h-5 w-5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 rounded-xl ring-2 ring-white/0 transition-all duration-300 group-hover:ring-white/10" })]
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "min-w-0 flex-1",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+						className: "truncate text-sm font-semibold text-foreground",
+						children: name
+					})
+				})]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "pointer-events-none absolute -top-2 left-1/2 z-50 w-max max-w-[220px] -translate-x-1/2 -translate-y-full rounded-xl border border-border/80 bg-card/95 px-4 py-3 opacity-0 shadow-[0_8px_30px_-6px_rgba(0,0,0,0.6)] backdrop-blur-md transition-all duration-300 group-hover:opacity-100",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					className: "text-xs leading-5 text-muted-foreground",
+					children: meta.note
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -bottom-1.5 left-1/2 h-3 w-3 -translate-x-1/2 rotate-45 border-b border-r border-border/80 bg-card/95" })]
+			})
+		]
+	});
+}
 function Skills() {
+	const [activeCategory, setActiveCategory] = (0, import_react.useState)(null);
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
 		id: "skills",
 		className: "relative overflow-hidden py-24",
@@ -1004,21 +1179,22 @@ function Skills() {
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-x-0 top-0 -z-10 h-px bg-gradient-to-r from-transparent via-border to-transparent" }),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "mx-auto max-w-6xl px-6",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionHeading, {
-					eyebrow: "Skills",
-					title: "A polished stack built to ship",
-					description: "A logo-led view of the languages, cloud platforms, and tools I use to build production-ready work."
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "grid gap-6 lg:grid-cols-[1.2fr_0.8fr]",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "space-y-5",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionHeading, {
+						eyebrow: "Skills",
+						title: "A polished stack built to ship",
+						description: "Click on a folder to explore the skills inside. Each category represents a core area of expertise."
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "grid grid-cols-2 gap-8 sm:grid-cols-4 lg:gap-12",
 						children: SKILLS.map((cat, idx) => {
 							const categoryMeta = CATEGORY_META[cat.category];
 							const CategoryIcon = categoryMeta.icon;
-							return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.article, {
+							const isActive = activeCategory === cat.category;
+							return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
 								initial: {
 									opacity: 0,
-									y: 18
+									y: 24
 								},
 								whileInView: {
 									opacity: 1,
@@ -1027,61 +1203,125 @@ function Skills() {
 								viewport: { once: true },
 								transition: {
 									duration: .5,
-									delay: idx * .06
+									delay: idx * .08
 								},
-								className: "rounded-3xl border border-border bg-card/90 p-6 shadow-[var(--shadow-elevated)] backdrop-blur",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "flex flex-wrap items-start justify-between gap-4 border-b border-border/70 pb-5",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "flex items-center gap-4",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											className: "grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 text-primary",
-											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CategoryIcon, { className: "h-5 w-5" })
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-											className: "font-mono text-xs uppercase tracking-[0.22em] text-accent",
-											children: cat.category
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-											className: "mt-1 text-xl font-semibold text-foreground",
-											children: categoryMeta.summary
-										})] })]
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-										className: "rounded-full border border-border bg-background/70 px-3 py-1 font-mono text-[11px] uppercase tracking-[0.22em] text-muted-foreground",
-										children: [cat.items.length, " skills"]
-									})]
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									className: "mt-5 grid gap-4 md:grid-cols-2",
-									children: cat.items.map((skill) => {
-										const skillMeta = SKILL_META[skill.name] ?? {
-											icon: Braces,
-											accent: "from-primary/20 to-accent/10 text-primary",
-											note: "Core skill used in day-to-day engineering work."
-										};
-										const SkillIcon = skillMeta.icon;
-										return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											className: "rounded-2xl border border-border/80 bg-background/70 p-4 transition-all hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-[var(--shadow-glow)]",
-											children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-												className: "flex items-start gap-3",
-												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-													className: `grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-gradient-to-br ${skillMeta.accent}`,
-													children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SkillIcon, { className: "h-5 w-5" })
-												}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-													className: "min-w-0 flex-1",
-													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-														className: "truncate text-sm font-semibold text-foreground",
-														children: skill.name
-													}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-														className: "mt-1 text-sm leading-6 text-muted-foreground",
-														children: skillMeta.note
-													})]
-												})]
+								className: "flex flex-col items-center",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: `group relative cursor-pointer rounded-3xl border p-6 pb-4 transition-all duration-300 ${isActive ? "border-primary/50 bg-card/90 shadow-[0_0_40px_-10px_rgba(99,102,241,0.4)]" : "border-border/60 bg-card/60 hover:border-primary/30 hover:bg-card/80 hover:shadow-[0_0_30px_-10px_rgba(99,102,241,0.2)]"}`,
+									onClick: () => setActiveCategory(isActive ? null : cat.category),
+									children: [
+										isActive && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pointer-events-none absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-primary to-transparent" }),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											className: "flex justify-center",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Folder, {
+												color: categoryMeta.color,
+												size: 1.4,
+												items: cat.items.slice(0, 3).map((skill, i) => {
+													return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+														className: "flex h-full w-full items-center justify-center",
+														children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SKILL_META[skill.name]?.icon ?? Braces, {
+															className: "h-4 w-4",
+															style: { color: categoryMeta.color }
+														})
+													}, i);
+												})
 											})
-										}, skill.name);
-									})
-								})]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "mt-5 text-center",
+											children: [
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+													className: "mx-auto mb-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white/5",
+													children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CategoryIcon, {
+														className: "h-4 w-4",
+														style: { color: categoryMeta.color }
+													})
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+													className: "text-sm font-semibold text-foreground",
+													children: cat.category
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+													className: "mt-1 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground",
+													children: [cat.items.length, " skills"]
+												})
+											]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											className: "mt-3 flex justify-center",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronRight, { className: `h-4 w-4 text-muted-foreground/50 transition-transform duration-300 ${isActive ? "rotate-90 text-primary" : ""}` })
+										})
+									]
+								})
 							}, cat.category);
 						})
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "space-y-5 lg:sticky lg:top-24 lg:self-start",
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AnimatePresence, {
+						mode: "wait",
+						children: activeCategory && /* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
+							initial: {
+								opacity: 0,
+								height: 0
+							},
+							animate: {
+								opacity: 1,
+								height: "auto"
+							},
+							exit: {
+								opacity: 0,
+								height: 0
+							},
+							transition: {
+								duration: .4,
+								ease: "easeInOut"
+							},
+							className: "overflow-hidden",
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "mt-10",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
+									initial: {
+										opacity: 0,
+										x: -16
+									},
+									animate: {
+										opacity: 1,
+										x: 0
+									},
+									transition: {
+										duration: .3,
+										delay: .1
+									},
+									className: "mb-6 flex items-center gap-3",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											className: "h-6 w-1 rounded-full",
+											style: { background: CATEGORY_META[activeCategory]?.color }
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+											className: "text-lg font-semibold text-foreground",
+											children: activeCategory
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+											className: "rounded-full border border-border bg-white/5 px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground",
+											children: [
+												SKILLS.find((s) => s.category === activeCategory)?.items.length,
+												" ",
+												"skills"
+											]
+										})
+									]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "grid gap-4 sm:grid-cols-2 lg:grid-cols-3",
+									children: SKILLS.find((s) => s.category === activeCategory)?.items.map((skill, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SkillCard, {
+										name: skill.name,
+										delay: i
+									}, skill.name))
+								})]
+							})
+						}, activeCategory)
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "mt-16 grid gap-6 lg:grid-cols-[1.2fr_0.8fr]",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.aside, {
 							initial: {
 								opacity: 0,
@@ -1093,7 +1333,7 @@ function Skills() {
 							},
 							viewport: { once: true },
 							transition: { duration: .5 },
-							className: "rounded-3xl border border-border bg-card p-6 shadow-[var(--shadow-elevated)]",
+							className: "rounded-3xl border border-border bg-card/90 p-6 shadow-[var(--shadow-elevated)] backdrop-blur",
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 									className: "font-mono text-xs uppercase tracking-[0.22em] text-accent",
@@ -1108,14 +1348,27 @@ function Skills() {
 									children: "These are the skills that show up most often in real projects, interview prep, and day-to-day delivery."
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									className: "mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-2",
-									children: FEATURED_STACK.map((skillName) => {
+									className: "mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3",
+									children: FEATURED_STACK.map((skillName, i) => {
 										const skillMeta = SKILL_META[skillName];
 										const SkillIcon = skillMeta.icon;
-										return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "rounded-2xl border border-border bg-background/70 p-3",
+										return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
+											initial: {
+												opacity: 0,
+												scale: .9
+											},
+											whileInView: {
+												opacity: 1,
+												scale: 1
+											},
+											viewport: { once: true },
+											transition: {
+												duration: .3,
+												delay: i * .05
+											},
+											className: "group rounded-2xl border border-border bg-background/70 p-3 transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-[var(--shadow-glow)]",
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-												className: `grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br ${skillMeta.accent}`,
+												className: `grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br ${skillMeta.accent} transition-transform duration-300 group-hover:scale-110`,
 												children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SkillIcon, { className: "h-5 w-5" })
 											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 												className: "mt-3 text-sm font-semibold text-foreground",
@@ -1146,14 +1399,23 @@ function Skills() {
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
 								className: "mt-4 space-y-3 text-sm leading-6 text-muted-foreground",
 								children: [
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: "• Cloud-first thinking with practical deployment choices." }),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: "• Clean version control habits and readable collaboration flow." }),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: "• AI tools used for speed, not as a substitute for judgment." })
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+										className: "flex items-start gap-2",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" }), "Cloud-first thinking with practical deployment choices."]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+										className: "flex items-start gap-2",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" }), "Clean version control habits and readable collaboration flow."]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+										className: "flex items-start gap-2",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-secondary" }), "AI tools used for speed, not as a substitute for judgment."]
+									})
 								]
 							})]
 						})]
-					})]
-				})]
+					})
+				]
 			})
 		]
 	});
@@ -1692,9 +1954,9 @@ function ContributionGraph({ activity }) {
 				})]
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "mt-6 rounded-3xl border border-border/70 bg-[#0d1117] p-4",
+				className: "mt-6 overflow-x-auto rounded-3xl border border-border/70 bg-[#0d1117] p-4",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "grid grid-cols-[2.5rem_1fr] gap-3",
+					className: "min-w-[750px] grid grid-cols-[2.5rem_1fr] gap-3",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "h-5" }),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {

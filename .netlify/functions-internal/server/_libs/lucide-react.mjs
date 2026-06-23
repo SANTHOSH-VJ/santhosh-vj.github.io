@@ -269,6 +269,16 @@ var ChevronDown = createLucideIcon("chevron-down", [["path", {
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
+var ChevronRight = createLucideIcon("chevron-right", [["path", {
+	d: "m9 18 6-6-6-6",
+	key: "mthhwq"
+}]]);
+/**
+* @license lucide-react v0.575.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
 var CircleCheck = createLucideIcon("circle-check", [["circle", {
 	cx: "12",
 	cy: "12",
@@ -894,4 +904,4 @@ var X = createLucideIcon("x", [["path", {
 	key: "d8bk6v"
 }]]);
 //#endregion
-export { ChevronDown as A, ExternalLink as C, Coffee as D, Cpu as E, Award as F, Atom as I, ArrowRight as L, Briefcase as M, Braces as N, Cloud as O, Bot as P, GitBranch as S, Database as T, Mail as _, Trophy as a, GraduationCap as b, Star as c, Send as d, Rocket as f, MapPin as g, Menu as h, UserRound as i, Building2 as j, CircleCheck as k, SquareTerminal as l, Phone as m, Workflow as n, TriangleAlert as o, RefreshCw as p, Users as r, Target as s, X as t, Sparkles as u, Linkedin as v, Download as w, Github as x, Layers as y };
+export { ChevronRight as A, ExternalLink as C, Coffee as D, Cpu as E, Bot as F, Award as I, Atom as L, Building2 as M, Briefcase as N, Cloud as O, Braces as P, ArrowRight as R, GitBranch as S, Database as T, Mail as _, Trophy as a, GraduationCap as b, Star as c, Send as d, Rocket as f, MapPin as g, Menu as h, UserRound as i, ChevronDown as j, CircleCheck as k, SquareTerminal as l, Phone as m, Workflow as n, TriangleAlert as o, RefreshCw as p, Users as r, Target as s, X as t, Sparkles as u, Linkedin as v, Download as w, Github as x, Layers as y };
