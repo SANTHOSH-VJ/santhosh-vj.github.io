@@ -27,7 +27,11 @@ export function Projects() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.05 }}
-                className="group relative overflow-hidden rounded-2xl border border-border bg-card transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-[var(--shadow-elevated)]"
+                className={`group relative overflow-hidden rounded-2xl border border-border bg-card transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-[var(--shadow-elevated)] ${
+                  i === PROJECTS.length - 1 && PROJECTS.length % 2 !== 0
+                    ? "md:col-span-2 md:mx-auto md:w-[calc(50%-0.75rem)] w-full"
+                    : ""
+                }`}
               >
                 <div className="relative h-48 overflow-hidden bg-gradient-to-br from-primary/20 via-accent/10 to-background">
                   {p.image ? (

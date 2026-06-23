@@ -17,6 +17,7 @@ import {
   TerminalSquare,
   Workflow,
   ChevronRight,
+  Code2,
 } from "lucide-react";
 import { SKILLS } from "@/constants/portfolio";
 import { SectionHeading } from "./SectionHeading";
@@ -32,12 +33,12 @@ const CATEGORY_META: Record<
     summary: "Core languages and problem-solving foundations.",
     color: "#F59E0B",
   },
-  Cloud: {
+  "Cloud & DevOps": {
     icon: Cloud,
     summary: "Cloud platforms, infra tooling, and delivery-ready environments.",
     color: "#3B82F6",
   },
-  "DevOps & Tools": {
+  "Tools & Platform": {
     icon: Workflow,
     summary: "Version control, delivery workflows, and productivity tooling.",
     color: "#EF4444",
@@ -131,6 +132,12 @@ const SKILL_META: Record<
     accent: "from-indigo-500/25 to-blue-500/10 text-indigo-300",
     gradient: "from-indigo-500 to-blue-500",
     note: "Workflow support for planning, refinement, and iteration.",
+  },
+  "VS Code": {
+    icon: Code2,
+    accent: "from-blue-500/25 to-sky-500/10 text-blue-400",
+    gradient: "from-blue-500 to-sky-500",
+    note: "Primary editor customized for speed, extensions, and flow.",
   },
 };
 

@@ -44,7 +44,7 @@ export const SKILLS = [
     ],
   },
   {
-    category: "Cloud",
+    category: "Cloud & DevOps",
     items: [
       { name: "AWS", level: 85 },
       { name: "OCI", level: 70 },
@@ -53,8 +53,9 @@ export const SKILLS = [
     ],
   },
   {
-    category: "DevOps & Tools",
+    category: "Tools & Platform",
     items: [
+      { name: "VS Code", level: 85 },
       { name: "Git", level: 88 },
       { name: "GitHub", level: 90 },
       { name: "Postman", level: 80 },
