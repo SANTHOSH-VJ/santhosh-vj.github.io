@@ -207,6 +207,60 @@ export function Skills() {
           description="Hover over a folder to explore the skills inside. Each category represents a core area of expertise."
         />
 
+        {/* ── Expanded skill cards ── */}
+        <AnimatePresence mode="wait">
+          {activeCategory && (
+            <motion.div
+              key={activeCategory}
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
+              className="overflow-hidden mb-24"
+            >
+              <div>
+                {/* Category header */}
+                <motion.div
+                  initial={{ opacity: 0, x: -16 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.3, delay: 0.1 }}
+                  className="mb-6 flex items-center gap-3"
+                >
+                  <div
+                    className="h-6 w-1 rounded-full"
+                    style={{
+                      background: CATEGORY_META[activeCategory]?.color,
+                    }}
+                  />
+                  <h3 className="text-lg font-semibold text-foreground">
+                    {activeCategory}
+                  </h3>
+                  <span className="rounded-full border border-border bg-white/5 px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                    {
+                      SKILLS.find((s) => s.category === activeCategory)?.items
+                        .length
+                    }{" "}
+                    skills
+                  </span>
+                </motion.div>
+
+                {/* Skill cards grid */}
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                  {SKILLS.find((s) => s.category === activeCategory)?.items.map(
+                    (skill, i) => (
+                      <SkillCard
+                        key={skill.name}
+                        name={skill.name}
+                        delay={i}
+                      />
+                    )
+                  )}
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
         {/* ── Folder grid ── */}
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-4 lg:gap-12">
           {SKILLS.map((cat, idx) => {
@@ -232,8 +286,6 @@ export function Skills() {
                   onClick={() =>
                     setActiveCategory(isActive ? null : cat.category)
                   }
-                  onMouseEnter={() => setActiveCategory(cat.category)}
-                  onMouseLeave={() => setActiveCategory(null)}
                 >
                   {/* Active glow */}
                   {isActive && (
@@ -292,60 +344,6 @@ export function Skills() {
             );
           })}
         </div>
-
-        {/* ── Expanded skill cards ── */}
-        <AnimatePresence mode="wait">
-          {activeCategory && (
-            <motion.div
-              key={activeCategory}
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.4, ease: "easeInOut" }}
-              className="overflow-hidden"
-            >
-              <div className="mt-10">
-                {/* Category header */}
-                <motion.div
-                  initial={{ opacity: 0, x: -16 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.3, delay: 0.1 }}
-                  className="mb-6 flex items-center gap-3"
-                >
-                  <div
-                    className="h-6 w-1 rounded-full"
-                    style={{
-                      background: CATEGORY_META[activeCategory]?.color,
-                    }}
-                  />
-                  <h3 className="text-lg font-semibold text-foreground">
-                    {activeCategory}
-                  </h3>
-                  <span className="rounded-full border border-border bg-white/5 px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-                    {
-                      SKILLS.find((s) => s.category === activeCategory)?.items
-                        .length
-                    }{" "}
-                    skills
-                  </span>
-                </motion.div>
-
-                {/* Skill cards grid */}
-                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                  {SKILLS.find((s) => s.category === activeCategory)?.items.map(
-                    (skill, i) => (
-                      <SkillCard
-                        key={skill.name}
-                        name={skill.name}
-                        delay={i}
-                      />
-                    )
-                  )}
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
 
         {/* ── Signature stack & delivery style sidebar ── */}
         <div className="mt-16 grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">

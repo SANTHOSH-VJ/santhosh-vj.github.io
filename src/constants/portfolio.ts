@@ -6,7 +6,7 @@ export const PROFILE = {
   location: "India",
   github: "https://github.com/SANTHOSH-VJ",
   linkedin: "https://www.linkedin.com/in/santhosh-v-146b58293/",
-  resumeUrl: "https://drive.google.com/file/d/1rEKi2FwyseXhPayQs4p0W15QSN4TeuBx/view?usp=sharing",
+  resumeUrl: "https://drive.google.com/file/d/1Q_C8Cgv6f4toyGavBhpti90rGVOm6zNn/view?usp=sharing",
   bio: "Passionate in Cloud Computing and software developer focused on building reliable, scalable systems on AWS.",
 };
 
@@ -107,6 +107,13 @@ export const CERTIFICATIONS = [
     credentialUrl: "https://www.credly.com/badges/11068a56-376b-4375-9b0e-cc4b5e378711/public_url",
     badgeUrl: "https://res.cloudinary.com/dw42jvqwu/image/upload/v1782122575/lfs101-introduction-to-linux_sfmsgf.png",
   },
+  {
+    name: "Google Cloud Computing Foundations Certificate",
+    issuer: "Google Cloud",
+    year: "2025",
+    credentialUrl: "https://www.credly.com/badges/cbcd2705-a975-4ee9-b097-cde67b2dcc0e/public_url",
+    badgeUrl: "https://res.cloudinary.com/dw42jvqwu/image/upload/v1782407537/google-cloud-computing-foundations-certificate_1_vymbnf.png",
+  },
 ];
 
 export const PROJECTS = [
@@ -181,7 +188,7 @@ export const ACHIEVEMENTS = [
 
 export const STATS = [
   { value: 1100, suffix: "+", label: "Problems Solved" },
-  { value: 5, suffix: "", label: "Certifications" },
+  { value: 6, suffix: "", label: "Certifications" },
   { value: 3, suffix: "+", label: "Projects Built" },
   { value: 3, suffix: "", label: "Cloud Platforms" },
 ];
