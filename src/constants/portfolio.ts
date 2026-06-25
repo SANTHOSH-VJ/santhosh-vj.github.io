@@ -188,7 +188,7 @@ export const ACHIEVEMENTS = [
 
 export const STATS = [
   { value: 1100, suffix: "+", label: "Problems Solved" },
-  { value: 6, suffix: "", label: "Certifications" },
+  { value: 5, suffix: "", label: "Certifications" },
   { value: 3, suffix: "+", label: "Projects Built" },
   { value: 3, suffix: "", label: "Cloud Platforms" },
 ];
