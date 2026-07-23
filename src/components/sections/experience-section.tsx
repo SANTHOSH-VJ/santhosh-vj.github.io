@@ -1,6 +1,4 @@
-"use client";
-
-import { motion } from "motion/react";
+import { FadeIn } from "@/components/ui/fade-in";
 
 const experiences = [
   {
@@ -47,12 +45,10 @@ export function ExperienceSection() {
 
           <div className="flex flex-col gap-8 md:gap-12">
             {experiences.map((exp, i) => (
-              <motion.div 
+              <FadeIn 
                 key={i}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
+                direction="left"
+                delay={i * 0.1}
                 className="relative pl-10 md:pl-16"
               >
                 {/* Timeline Dot */}
@@ -84,7 +80,7 @@ export function ExperienceSection() {
                     ))}
                   </div>
                 </div>
-              </motion.div>
+              </FadeIn>
             ))}
           </div>
         </div>

@@ -1,8 +1,6 @@
-"use client";
-
-import { motion } from "motion/react";
 import { TechSkillTile } from "@/components/ui/tech-skill-tile";
 import { images } from "@/lib/constants";
+import { FadeIn } from "@/components/ui/fade-in";
 
 export function TechnologiesSection() {
   interface Skill {
@@ -62,12 +60,10 @@ export function TechnologiesSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {skillCategories.map((cat, i) => (
-            <motion.div
+            <FadeIn
               key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
+              direction="up"
+              delay={i * 0.1}
               className="bg-[#f7f7f7] rounded-[30px] overflow-hidden flex flex-col h-full"
             >
               {/* Skill grid */}
@@ -87,7 +83,7 @@ export function TechnologiesSection() {
                   {cat.desc}
                 </p>
               </div>
-            </motion.div>
+            </FadeIn>
           ))}
         </div>
       </div>

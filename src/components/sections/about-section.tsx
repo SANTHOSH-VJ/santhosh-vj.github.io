@@ -1,8 +1,6 @@
-"use client";
-
-import { motion } from "motion/react";
 import { images } from "@/lib/constants";
 import Image from "next/image";
+import { FadeIn } from "@/components/ui/fade-in";
 
 export function AboutSection() {
   return (
@@ -19,11 +17,8 @@ export function AboutSection() {
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">
 
           {/* Left Column */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <FadeIn
+            direction="left"
             className="lg:w-5/12 w-full flex flex-col gap-10 lg:pt-4"
           >
             <div className="flex flex-col items-start gap-6">
@@ -70,14 +65,12 @@ export function AboutSection() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </FadeIn>
 
           {/* Right Column */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+          <FadeIn
+            direction="right"
+            delay={0.2}
             className="lg:w-7/12 w-full flex flex-col justify-center lg:pt-16"
           >
             <div className="font-['DM_Sans',sans-serif] text-[#4b5563] text-[13px] md:text-sm lg:text-base leading-[1.6] md:leading-[1.7]">
@@ -97,7 +90,7 @@ export function AboutSection() {
                 Beyond development, I continuously challenge myself through coding practice, personal projects, and professional certifications. Every project is an opportunity to become a better engineer, and every problem is another step toward building software that people can trust.
               </p>
             </div>
-          </motion.div>
+          </FadeIn>
 
         </div>
       </div>

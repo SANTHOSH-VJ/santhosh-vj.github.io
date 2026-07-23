@@ -277,18 +277,11 @@ function Svg8() {
 function Group9() {
   return (
     <div className="absolute inset-[-38%_24%_38%_-24%]" data-name="Group">
-      <div className="absolute inset-[-24%]">
+      <div className="absolute inset-[-24%] blur-[60px]">
         <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 740 740">
-          <g filter="url(#filter0_f_1_3367)" id="Group">
+          <g id="Group">
             <path d={svgPaths.p1ff3f500} fill="var(--fill-0, #FFFAE5)" fillOpacity="0.35" id="Vector" />
           </g>
-          <defs>
-            <filter colorInterpolationFilters="sRGB" filterUnits="userSpaceOnUse" height="740" id="filter0_f_1_3367" width="740" x="0" y="0">
-              <feFlood floodOpacity="0" result="BackgroundImageFix" />
-              <feBlend in="SourceGraphic" in2="BackgroundImageFix" mode="normal" result="shape" />
-              <feGaussianBlur result="effect1_foregroundBlur_1_3367" stdDeviation="60" />
-            </filter>
-          </defs>
         </svg>
       </div>
     </div>
@@ -306,18 +299,11 @@ function Svg9() {
 function Group10() {
   return (
     <div className="absolute inset-[-41.4%_-17.2%_46.88%_22.68%]" data-name="Group">
-      <div className="absolute inset-[-24%]">
+      <div className="absolute inset-[-24%] blur-[57px]">
         <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 699.433 699.433">
-          <g filter="url(#filter0_f_1_3399)" id="Group">
+          <g id="Group">
             <path d={svgPaths.p5a5e300} fill="var(--fill-0, #FFFAE5)" fillOpacity="0.35" id="Vector" />
           </g>
-          <defs>
-            <filter colorInterpolationFilters="sRGB" filterUnits="userSpaceOnUse" height="699.433" id="filter0_f_1_3399" width="699.433" x="6.55651e-07" y="0">
-              <feFlood floodOpacity="0" result="BackgroundImageFix" />
-              <feBlend in="SourceGraphic" in2="BackgroundImageFix" mode="normal" result="shape" />
-              <feGaussianBlur result="effect1_foregroundBlur_1_3399" stdDeviation="56.7108" />
-            </filter>
-          </defs>
         </svg>
       </div>
     </div>
@@ -335,18 +321,11 @@ function Svg10() {
 function Group11() {
   return (
     <div className="absolute inset-[-141.1%_-125.99%_54.79%_39.69%]" data-name="Group">
-      <div className="absolute inset-[-29.41%_-11.07%]">
+      <div className="absolute inset-[-29.41%_-11.07%] blur-[112px]">
         <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 2466.63 1207.23">
-          <g filter="url(#filter0_f_1_3393)" id="Group">
+          <g id="Group">
             <path d={svgPaths.p1e737e80} fill="var(--fill-0, #FFFAE5)" fillOpacity="0.35" id="Vector" />
           </g>
-          <defs>
-            <filter colorInterpolationFilters="sRGB" filterUnits="userSpaceOnUse" height="1207.23" id="filter0_f_1_3393" width="2466.63" x="0" y="-5.00679e-06">
-              <feFlood floodOpacity="0" result="BackgroundImageFix" />
-              <feBlend in="SourceGraphic" in2="BackgroundImageFix" mode="normal" result="shape" />
-              <feGaussianBlur result="effect1_foregroundBlur_1_3393" stdDeviation="111.781" />
-            </filter>
-          </defs>
         </svg>
       </div>
     </div>
@@ -385,7 +364,7 @@ function Container3() {
 function Container5() {
   return (
     <div className="absolute pointer-events-none select-none h-[344px] left-[-212px] top-[30px] w-[592px]" data-name="Container">
-      <Image priority fetchPriority="high" loading="eager" alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgCloudTextureMask} fill sizes="100vw" />
+      <Image priority alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgCloudTextureMask} fill sizes="100vw" />
     </div>
   );
 }
@@ -393,7 +372,7 @@ function Container5() {
 function Container6() {
   return (
     <div className="absolute pointer-events-none select-none h-[670px] left-[-157px] top-[-52px] w-[1026px]" data-name="Container">
-      <Image priority fetchPriority="high" loading="eager" alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgCloudTextureMask} fill sizes="100vw" />
+      <Image priority alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgCloudTextureMask} fill sizes="100vw" />
     </div>
   );
 }
