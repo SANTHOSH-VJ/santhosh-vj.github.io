@@ -363,8 +363,8 @@ function Svg11() {
 
 function Heading() {
   return (
-    <div className="content-stretch drop-shadow-[0px_4px_1.5px_rgba(0,0,0,0.1),0px_10px_4px_rgba(0,0,0,0.04)] flex flex-col items-start w-full max-w-[800px] relative" data-name="Heading 1">
-      <h1 className="[word-break:break-word] flex flex-col font-['Inter:Extra_Bold',sans-serif] font-extrabold justify-center leading-[0] not-italic relative text-[32px] md:text-[40px] text-white tracking-[-1px] whitespace-normal w-full">
+    <div className="content-stretch drop-shadow-[0px_4px_1.5px_rgba(0,0,0,0.1),0px_10px_4px_rgba(0,0,0,0.04)] flex flex-col items-start w-fit relative" data-name="Heading 1">
+      <h1 className="[word-break:break-word] flex flex-col font-['Inter:Extra_Bold',sans-serif] font-extrabold justify-center leading-[0] not-italic relative text-[32px] md:text-[40px] text-white tracking-[-1px] whitespace-normal w-fit">
         <span className="leading-tight md:leading-[46px] mb-0 block">Building The Future with Cloud,</span>
         <span className="leading-tight md:leading-[46px] mb-0 block">Automation, and Ambition</span>
       </h1>
@@ -374,8 +374,8 @@ function Heading() {
 
 function Container3() {
   return (
-    <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
-      <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[20px] text-[rgba(255,255,255,0.85)] tracking-[0.2px] w-full">
+    <div className="content-stretch flex flex-col items-start relative shrink-0 w-fit" data-name="Container">
+      <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[20px] text-[rgba(255,255,255,0.85)] tracking-[0.2px] w-fit">
         <p className="leading-[30px]">Dream, Build, Deploy.</p>
       </div>
     </div>
@@ -384,7 +384,7 @@ function Container3() {
 
 function Container5() {
   return (
-    <div className="absolute h-[344px] left-[-212px] top-[30px] w-[592px]" data-name="Container">
+    <div className="absolute pointer-events-none select-none h-[344px] left-[-212px] top-[30px] w-[592px]" data-name="Container">
       <Image priority fetchPriority="high" loading="eager" alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgCloudTextureMask} fill sizes="100vw" />
     </div>
   );
@@ -392,7 +392,7 @@ function Container5() {
 
 function Container6() {
   return (
-    <div className="absolute h-[670px] left-[-157px] top-[-52px] w-[1026px]" data-name="Container">
+    <div className="absolute pointer-events-none select-none h-[670px] left-[-157px] top-[-52px] w-[1026px]" data-name="Container">
       <Image priority fetchPriority="high" loading="eager" alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgCloudTextureMask} fill sizes="100vw" />
     </div>
   );
@@ -422,7 +422,7 @@ function Button1() {
 
 function Container4() {
   return (
-    <div className="content-stretch flex flex-wrap sm:flex-nowrap gap-[16px] items-center relative w-full" data-name="Container">
+    <div className="content-stretch flex flex-wrap sm:flex-nowrap gap-[16px] items-center relative w-fit" data-name="Container">
       <Container5 />
       <Container6 />
       <Button />
@@ -433,7 +433,7 @@ function Container4() {
 
 function Margin() {
   return (
-    <div className="content-stretch flex flex-col items-start pt-[16px] relative shrink-0 w-full" data-name="Margin">
+    <div className="content-stretch flex flex-col items-start pt-[16px] relative shrink-0 w-fit" data-name="Margin">
       <Container4 />
     </div>
   );
@@ -441,7 +441,7 @@ function Margin() {
 
 function Container2() {
   return (
-    <div className="content-stretch flex flex-col gap-[28px] items-start w-full max-w-[720px] relative" data-name="Container">
+    <div className="select-text content-stretch flex flex-col gap-[28px] items-start w-fit relative" data-name="Container">
       <Heading />
       <Container3 />
       <Margin />
@@ -1570,7 +1570,7 @@ function Container1() {
 
 export default function Section() {
   return (
-    <div className="content-stretch flex flex-col items-start justify-center relative size-full overflow-hidden" style={{ backgroundImage: "linear-gradient(179.349deg, rgb(10, 23, 51) 1.2399%, rgb(41, 92, 184) 38.325%, rgb(96, 165, 250) 67.603%, rgb(229, 241, 252) 86.146%, rgb(239, 246, 255) 98.833%)" }} data-name="Section">
+    <div className="select-none content-stretch flex flex-col items-start justify-center relative size-full overflow-hidden" style={{ backgroundImage: "linear-gradient(179.349deg, rgb(10, 23, 51) 1.2399%, rgb(41, 92, 184) 38.325%, rgb(96, 165, 250) 67.603%, rgb(229, 241, 252) 86.146%, rgb(239, 246, 255) 98.833%)" }} data-name="Section">
       <Svg />
       <Svg1 />
       <Svg2 />
