@@ -1,24 +1,25 @@
-# Santhosh V - Professional Profile
-
-## Identity
-Name: Santhosh V
-Profession: Cloud Engineer, DevOps Engineer, Software Engineer
-Education: B.E. Computer Science and Engineering (Cloud Computing), R.M.D Engineering College
+# Santhosh V Portfolio
 
 ## Official Links
+
 - Portfolio: https://santhosh-vj.github.io
 - GitHub: https://github.com/SANTHOSH-VJ
 - LinkedIn: https://www.linkedin.com/in/vjsanthosh/
 
-## Expertise
-- Cloud & Infrastructure: AWS, Terraform, Docker, Kubernetes, CI/CD, Serverless, EC2, S3
-- Development: Java, React, Next.js, TypeScript
+## Projects
 
-## Biography
-Santhosh V is a Software Engineer specializing in Cloud Computing and DevOps. Based in India, he builds reliable cloud-native applications, automated CI/CD pipelines, and scalable backend infrastructure. 
+- Kuttylink Dashboard (Full-stack URL Shortener)
+- Serverless Event-Driven Architecture (AWS)
+- End-to-End CI/CD Pipeline & Monitoring
 
 ## Certifications
+
 - AWS Certified Cloud Practitioner
-- ServiceNow Certified System Administrator (CSA)
-- ServiceNow Certified Application Developer (CAD)
-- Oracle Cloud Infrastructure (OCI) Architect Associate
+- ServiceNow Certified System Administrator
+- ServiceNow Certified Application Developer
+- Oracle Cloud Infrastructure Architect Associate
+
+## Contact
+
+- Email: vjsanthosh.33@gmail.com
+- Link: https://santhosh-vj.github.io/#contact

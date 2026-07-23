@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import Image from "next/image";
 import { Menu, X, Github, Linkedin } from "lucide-react";
 import { images, social, navLinks } from "@/lib/constants";
 
@@ -115,11 +116,13 @@ export function Navbar() {
       <div className="max-w-[1360px] mx-auto px-6 lg:px-10 h-14 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <div className="size-8 rounded-full overflow-hidden bg-[#e5e5e5]">
-            <img
+          <div className="relative size-8 rounded-full overflow-hidden bg-[#e5e5e5]">
+            <Image
               src={images.santhoshPortraitSuit}
               alt="Santhosh V"
-              className="w-full h-full object-cover object-top"
+              fill
+              sizes="32px"
+              className="object-cover object-top"
             />
           </div>
           <span className="font-['DM_Sans',sans-serif] font-semibold text-white text-sm">

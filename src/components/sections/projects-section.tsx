@@ -84,13 +84,13 @@ export function ProjectsSection() {
                 </div>
 
                 <div className="mb-8 p-6 bg-[#f8fafc] rounded-2xl border border-[#f1f5f9]">
-                  <h4 className="font-['DM_Sans',sans-serif] text-[11px] tracking-[0.15em] text-[#06b6d4] uppercase font-bold mb-4">
+                  <h4 className="font-['DM_Sans',sans-serif] text-[11px] tracking-[0.15em] text-[#0891b2] uppercase font-bold mb-4">
                     Features
                   </h4>
                   <ul className="flex flex-col gap-3">
                     {p.features.map((f, idx) => (
                       <li key={idx} className="font-['DM_Sans',sans-serif] text-[#555] text-sm flex items-start gap-3 leading-snug">
-                        <svg className="w-4 h-4 mt-0.5 text-[#06b6d4] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg className="w-4 h-4 mt-0.5 text-[#0891b2] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
                         </svg>
                         <span>{f}</span>

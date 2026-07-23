@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     default: "Santhosh V — Cloud Engineer & DevOps Specialist",
     template: "%s | Santhosh V"
   },
-  description: "Portfolio of Santhosh V, a Software Engineer specializing in Cloud Computing, AWS, DevOps, and scalable backend infrastructure. Graduate of R.M.D Engineering College.",
+  description: "Portfolio of Santhosh V, a Cloud Engineer specializing in AWS, DevOps, cloud computing, and scalable backend applications. Graduate of R.M.D.",
   keywords: [
     "Santhosh V",
     "Santhosh V Portfolio",

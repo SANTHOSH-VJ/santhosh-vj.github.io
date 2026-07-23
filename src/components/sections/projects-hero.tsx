@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, useMotionValue, useTransform } from "motion/react";
 
 export function ProjectsHero() {
@@ -64,10 +65,12 @@ export function ProjectsHero() {
       className="sticky top-0 h-[80svh] md:h-[100svh] overflow-hidden z-0 flex items-center justify-center"
     >
       {/* Background image stays fixed in place and full brightness */}
-      <img
+      <Image
         src="https://www.devoteam.com/wp-content/uploads/2024/09/Amplify-cloud-landscape.jpg"
         alt="Cloud & DevOps Projects"
-        className="absolute inset-0 w-full h-full object-cover object-center"
+        fill
+        sizes="100vw"
+        className="object-cover object-center"
       />
 
       {/* Content — parallax layer, slower + fades before the card covers it */}

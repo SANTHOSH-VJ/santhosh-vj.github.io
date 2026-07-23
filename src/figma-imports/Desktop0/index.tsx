@@ -1,3 +1,5 @@
+import React from "react";
+import Image from "next/image";
 import svgPaths from "./svg-nt427q6i2s";
 const imgBadgeAwsCloudPractitioner = "/assets/images/badge-aws-cloud-practitioner.png";
 const imgBadgeServicenowSystemAdmin = "/assets/images/badge-servicenow-system-admin.png";
@@ -97,7 +99,7 @@ function BadgeSlots() {
   return (
     <div className="content-stretch flex items-start overflow-clip relative shrink-0" data-name="Badge Slots">
       <div className="relative shrink-0 size-[52px]" data-name="aws-certified-cloud-practitioner_1_qpdvun 1">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgBadgeAwsCloudPractitioner} />
+        <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgBadgeAwsCloudPractitioner} fill sizes="100vw" />
       </div>
     </div>
   );
@@ -295,10 +297,10 @@ function BadgeSlots1() {
   return (
     <div className="content-stretch flex gap-[10px] items-start overflow-clip relative shrink-0" data-name="Badge Slots">
       <div className="relative shrink-0 size-[52px]" data-name="servicenow-certified-system-administrator-csa_kmagdm 1">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgBadgeServicenowSystemAdmin} />
+        <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgBadgeServicenowSystemAdmin} fill sizes="100vw" />
       </div>
       <div className="relative shrink-0 size-[52px]" data-name="servicenow-certified-system-administrator-csa_kmagdm 2">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgBadgeCertifiedApplicationDeveloper} />
+        <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgBadgeCertifiedApplicationDeveloper} fill sizes="100vw" />
       </div>
     </div>
   );
@@ -459,7 +461,7 @@ function BadgeSlots2() {
     <div className="content-stretch flex items-start overflow-clip relative shrink-0" data-name="Badge Slots">
       <div className="h-[51px] relative shrink-0 w-[52px]" data-name="OCI25CAA_s1zpar 1">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <img alt="" className="absolute h-full left-[-49.06%] max-w-none top-0 w-[196.23%]" src={imgBadgeOciArchitectAssociate} />
+          <Image alt="" className="absolute h-full left-[-49.06%] max-w-none top-0 w-[196.23%]" src={imgBadgeOciArchitectAssociate} fill sizes="100vw" />
         </div>
       </div>
     </div>
