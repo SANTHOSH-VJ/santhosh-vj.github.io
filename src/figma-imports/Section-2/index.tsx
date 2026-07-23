@@ -363,11 +363,10 @@ function Svg11() {
 
 function Heading() {
   return (
-    <div className="content-stretch drop-shadow-[0px_4px_1.5px_rgba(0,0,0,0.1),0px_10px_4px_rgba(0,0,0,0.04)] flex flex-col items-start w-full max-w-[560px] relative" data-name="Heading 1">
-      <h1 className="[word-break:break-word] flex flex-col font-['Inter:Extra_Bold',sans-serif] font-extrabold justify-center leading-[0] not-italic relative text-[32px] md:text-[40px] text-white tracking-[-1px] whitespace-normal md:whitespace-nowrap w-full">
-        <span className="leading-tight md:leading-[46px] mb-0 block">Santhosh V — Cloud Engineer</span>
-        <span className="leading-tight md:leading-[46px] mb-0 block text-[#e2e8f0] text-[28px] md:text-[34px]">Building The Future with</span>
-        <span className="leading-tight md:leading-[46px] block text-[#e2e8f0] text-[28px] md:text-[34px]">Cloud & Automation</span>
+    <div className="content-stretch drop-shadow-[0px_4px_1.5px_rgba(0,0,0,0.1),0px_10px_4px_rgba(0,0,0,0.04)] flex flex-col items-start w-full max-w-[800px] relative" data-name="Heading 1">
+      <h1 className="[word-break:break-word] flex flex-col font-['Inter:Extra_Bold',sans-serif] font-extrabold justify-center leading-[0] not-italic relative text-[32px] md:text-[40px] text-white tracking-[-1px] whitespace-normal w-full">
+        <span className="leading-tight md:leading-[46px] mb-0 block">Building The Future with Cloud,</span>
+        <span className="leading-tight md:leading-[46px] mb-0 block">Automation, and Ambition</span>
       </h1>
     </div>
   );

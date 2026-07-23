@@ -65,13 +65,15 @@ export function ProjectsHero() {
       className="sticky top-0 h-[80svh] md:h-[100svh] overflow-hidden z-0 flex items-center justify-center"
     >
       {/* Background image stays fixed in place and full brightness */}
-      <Image
-        src="https://www.devoteam.com/wp-content/uploads/2024/09/Amplify-cloud-landscape.jpg"
-        alt="Cloud & DevOps Projects"
-        fill
-        sizes="100vw"
-        className="object-cover object-center"
-      />
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="https://www.devoteam.com/wp-content/uploads/2024/09/Amplify-cloud-landscape.jpg"
+          alt="Cloud & DevOps Projects"
+          fill
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+      </div>
 
       {/* Content — parallax layer, slower + fades before the card covers it */}
       <motion.div
