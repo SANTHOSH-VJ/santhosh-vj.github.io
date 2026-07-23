@@ -11,6 +11,7 @@ export const images = {
   projectCicdPipeline: "/assets/images/project-cicd-pipeline.png",
   badgeAwsCloudPractitioner: "/assets/images/badge-aws-cloud-practitioner.png",
   badgeServicenowSystemAdmin: "/assets/images/badge-servicenow-system-admin.png",
+  badgeCertifiedApplicationDeveloper: "/assets/images/certified-application-developer-cad.png",
   badgeOciArchitectAssociate: "/assets/images/badge-oci-architect-associate.png",
   abstractGreenWaves: "/assets/images/abstract-green-waves.png",
   yewTreeBranches: "/assets/images/yew-tree-branches.png",

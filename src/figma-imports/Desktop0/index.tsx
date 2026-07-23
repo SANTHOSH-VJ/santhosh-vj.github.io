@@ -1,6 +1,7 @@
 import svgPaths from "./svg-nt427q6i2s";
 const imgBadgeAwsCloudPractitioner = "/assets/images/badge-aws-cloud-practitioner.png";
 const imgBadgeServicenowSystemAdmin = "/assets/images/badge-servicenow-system-admin.png";
+const imgBadgeCertifiedApplicationDeveloper = "/assets/images/certified-application-developer-cad.png";
 const imgBadgeOciArchitectAssociate = "/assets/images/badge-oci-architect-associate.png";
 import { imgDivFramer1K87S } from "./svg-clv0y";
 
@@ -297,7 +298,7 @@ function BadgeSlots1() {
         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgBadgeServicenowSystemAdmin} />
       </div>
       <div className="relative shrink-0 size-[52px]" data-name="servicenow-certified-system-administrator-csa_kmagdm 2">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgBadgeServicenowSystemAdmin} />
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgBadgeCertifiedApplicationDeveloper} />
       </div>
     </div>
   );
