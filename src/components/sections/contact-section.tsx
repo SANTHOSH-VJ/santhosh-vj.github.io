@@ -61,21 +61,21 @@ export function ContactSection() {
 
       <div className="relative max-w-[1360px] mx-auto px-6 lg:px-10 flex flex-col items-center text-center w-full z-10">
 
-        <span className="font-['DM_Sans',sans-serif] text-[#2563eb] text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase mb-6">
+        <span className="font-sans text-[#2563eb] text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase mb-6">
           Get in Touch
         </span>
 
-        <h2 className="font-['DM_Sans',sans-serif] font-black text-[#111] text-5xl md:text-7xl lg:text-8xl tracking-[-0.04em] leading-[1.1] mb-8 max-w-4xl">
+        <h2 className="font-sans font-black text-[#111] text-5xl md:text-7xl lg:text-8xl tracking-[-0.04em] leading-[1.1] mb-8 max-w-4xl">
           Let's Build <br className="hidden md:block" />
           <span className="text-[#2563eb]">Something.</span>
         </h2>
 
-        <p className="font-['DM_Sans',sans-serif] text-[#475569] text-sm md:text-base max-w-xl leading-relaxed mb-16">
+        <p className="font-sans text-[#475569] text-sm md:text-base max-w-xl leading-relaxed mb-16">
           I'm currently open to internships, collaborations, and interesting projects. If you have something worth building, I want to hear about it.
         </p>
 
         <div className="w-full max-w-xl flex flex-col items-center gap-4">
-          <span className="font-['DM_Sans',sans-serif] text-[#4b5563] text-[10px] md:text-xs font-bold tracking-[0.1em] uppercase mb-2">
+          <span className="font-sans text-[#4b5563] text-[10px] md:text-xs font-bold tracking-[0.1em] uppercase mb-2">
             Start the conversation
           </span>
 
@@ -104,7 +104,7 @@ export function ContactSection() {
               </button>
             </div>
 
-            <span className={`font-['DM_Sans',sans-serif] text-[10px] md:text-xs tracking-wider font-mono mt-3 mb-8 min-h-[20px] ${status === 'success' ? 'text-green-600 font-bold' : status === 'error' ? 'text-red-500' : 'text-[#4b5563]'}`}>
+            <span className={`font-sans text-[10px] md:text-xs tracking-wider font-mono mt-3 mb-8 min-h-[20px] ${status === 'success' ? 'text-green-600 font-bold' : status === 'error' ? 'text-red-500' : 'text-[#4b5563]'}`}>
               {status === "success" 
                 ? "Message sent successfully! I'll get back to you soon."
                 : status === "error"
@@ -119,21 +119,21 @@ export function ContactSection() {
                 type="submit"
                 disabled={status === "submitting" || status === "success"}
                 aria-label="Submit email"
-                className="bg-[#2563eb] text-white font-['Inter',sans-serif] font-semibold text-sm px-6 py-3 rounded-[8px] md:rounded-[12px] hover:bg-[#1d4ed8] transition-all duration-200 shadow-[0_4px_14px_rgba(37,99,235,0.2)] hover:shadow-[0_6px_20px_rgba(37,99,235,0.3)] disabled:opacity-50 disabled:cursor-not-allowed"
+                className="bg-[#2563eb] text-white font-mono font-semibold text-sm px-6 py-3 rounded-[8px] md:rounded-[12px] hover:bg-[#1d4ed8] transition-all duration-200 shadow-[0_4px_14px_rgba(37,99,235,0.2)] hover:shadow-[0_6px_20px_rgba(37,99,235,0.3)] disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {step === 1 ? "Next Step" : status === "submitting" ? "Sending..." : "Send Message"}
               </button>
               <a
                 href="/Santhosh_Resume.pdf"
                 download="Santhosh_Resume.pdf"
-                className="bg-white border border-[#e2e8f0] text-[#475569] font-['Inter',sans-serif] font-medium text-sm px-6 py-3 rounded-[8px] md:rounded-[12px] hover:bg-[#f8fafc] hover:text-[#111] hover:border-[#cbd5e1] shadow-sm transition-all duration-200"
+                className="bg-white border border-[#e2e8f0] text-[#475569] font-mono font-medium text-sm px-6 py-3 rounded-[8px] md:rounded-[12px] hover:bg-[#f8fafc] hover:text-[#111] hover:border-[#cbd5e1] shadow-sm transition-all duration-200"
               >
                 Download Resume
               </a>
             </div>
           </form>
 
-          <div className="mt-12 flex items-center justify-center gap-6 text-[#4b5563] font-['DM_Sans',sans-serif] text-xs">
+          <div className="mt-12 flex items-center justify-center gap-6 text-[#4b5563] font-sans text-xs">
             <a href={`mailto:${social.email}`} className="flex items-center gap-2 hover:text-[#2563eb] transition-colors">
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
               {social.email}
@@ -150,7 +150,7 @@ export function ContactSection() {
 
       {/* Copyright */}
       <div className="w-full text-center mt-20 md:mt-24 pb-4 pt-6 border-t border-[#e2e8f0] relative z-10">
-        <p className="font-['DM_Sans',sans-serif] text-[#4b5563] text-[11px] md:text-xs">
+        <p className="font-sans text-[#4b5563] text-[11px] md:text-xs">
           © 2026 Santhosh V. All rights reserved.
         </p>
       </div>

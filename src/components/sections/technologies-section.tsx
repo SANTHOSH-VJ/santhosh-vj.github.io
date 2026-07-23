@@ -51,9 +51,9 @@ export function TechnologiesSection() {
       <div className="max-w-[1360px] mx-auto px-6 lg:px-10">
         <div className="text-center mb-12">
           <div className="bg-white border border-[#ededed] rounded-full px-5 py-2 inline-flex mb-4">
-            <span className="font-['DM_Sans',sans-serif] font-medium text-[#111] text-sm">Technologies I work with</span>
+            <span className="font-sans font-medium text-[#111] text-sm">Technologies I work with</span>
           </div>
-          <h2 className="font-['DM_Sans',sans-serif] font-semibold text-[#111] text-3xl md:text-4xl tracking-[-1.2px]">
+          <h2 className="font-sans font-semibold text-[#111] text-3xl md:text-4xl tracking-[-1.2px]">
             Technologies, tools with...
           </h2>
         </div>
@@ -76,10 +76,10 @@ export function TechnologiesSection() {
               </div>
               {/* Label */}
               <div className="px-7 pb-7 mt-auto">
-                <h3 className="font-['DM_Sans',sans-serif] font-medium text-[#111] text-lg tracking-[-0.36px]">
+                <h3 className="font-sans font-medium text-[#111] text-lg tracking-[-0.36px]">
                   {cat.title}
                 </h3>
-                <p className="font-['DM_Sans',sans-serif] text-[#4b5563] text-xs tracking-[-0.24px] mt-1">
+                <p className="font-sans text-[#4b5563] text-xs tracking-[-0.24px] mt-1">
                   {cat.desc}
                 </p>
               </div>

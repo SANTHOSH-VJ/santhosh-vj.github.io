@@ -125,7 +125,7 @@ export function Navbar() {
               className="object-cover object-top"
             />
           </div>
-          <span className="font-['DM_Sans',sans-serif] font-semibold text-white text-sm">
+          <span className="font-sans font-semibold text-white text-sm">
             SANTHOSH V
           </span>
         </div>
@@ -137,7 +137,7 @@ export function Navbar() {
               key={link}
               href={`#${link.toLowerCase()}`}
               onClick={(e) => handleNavClick(e, `#${link.toLowerCase()}`)}
-              className={`font-['DM_Sans',sans-serif] text-sm transition-colors duration-200 ${
+              className={`font-sans text-sm transition-colors duration-200 ${
                 activeSection === link
                   ? "text-white font-bold"
                   : "text-white/70 hover:text-white"
@@ -173,7 +173,7 @@ export function Navbar() {
           <a
             href="#contact"
             onClick={(e) => handleNavClick(e, '#contact')}
-            className="bg-gradient-to-r from-[#2563eb] to-[#3b82f6] text-white text-sm font-['Inter',sans-serif] font-semibold px-5 py-2 rounded-full shadow-[0_10px_20px_-5px_rgba(37,99,235,0.5)] hover:shadow-[0_10px_30px_-5px_rgba(37,99,235,0.7)] transition-all duration-200"
+            className="bg-gradient-to-r from-[#2563eb] to-[#3b82f6] text-white text-sm font-mono font-semibold px-5 py-2 rounded-full shadow-[0_10px_20px_-5px_rgba(37,99,235,0.5)] hover:shadow-[0_10px_30px_-5px_rgba(37,99,235,0.7)] transition-all duration-200"
           >
             Let&apos;s Talk
           </a>
@@ -203,7 +203,7 @@ export function Navbar() {
               <a
                 key={link}
                 href={`#${link.toLowerCase()}`}
-                className={`font-['DM_Sans',sans-serif] text-base py-1 ${
+                className={`font-sans text-base py-1 ${
                   activeSection === link
                     ? "text-white font-bold"
                     : "text-white/80"

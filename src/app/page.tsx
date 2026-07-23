@@ -15,7 +15,7 @@ const ContactSection = dynamic(() => import('@/components/sections/contact-secti
 
 export default function Home() {
   return (
-    <div className="bg-[#030213] min-h-screen font-['DM_Sans',sans-serif] selection:bg-[#2563eb] selection:text-white relative">
+    <div className="bg-[#030213] min-h-screen font-sans selection:bg-[#2563eb] selection:text-white relative">
       <script id="json-ld" type="application/ld+json" dangerouslySetInnerHTML={{
         __html: JSON.stringify({
           "@context": "https://schema.org",

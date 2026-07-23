@@ -13,10 +13,10 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
           {/* Brand Col */}
           <div className="md:col-span-5 flex flex-col gap-6">
-            <h3 className="font-['DM_Sans',sans-serif] font-bold text-2xl tracking-tight">
+            <h3 className="font-sans font-bold text-2xl tracking-tight">
               Santhosh V.
             </h3>
-            <p className="font-['DM_Sans',sans-serif] text-white/60 text-sm leading-relaxed max-w-sm">
+            <p className="font-sans text-white/60 text-sm leading-relaxed max-w-sm">
               Cloud Engineer & DevOps Practitioner building reliable infrastructure and scalable applications. Always learning, always building.
             </p>
             <div className="flex gap-4">
@@ -50,7 +50,7 @@ export function Footer() {
 
           {/* Links Col */}
           <div className="md:col-span-3 flex flex-col gap-5">
-            <h4 className="font-['DM_Sans',sans-serif] font-semibold text-lg text-white mb-2">
+            <h4 className="font-sans font-semibold text-lg text-white mb-2">
               Navigation
             </h4>
             <div className="flex flex-col gap-3">
@@ -58,7 +58,7 @@ export function Footer() {
                 <a
                   key={link}
                   href={`#${link.toLowerCase()}`}
-                  className="font-['DM_Sans',sans-serif] text-sm text-white/60 hover:text-white transition-colors w-fit"
+                  className="font-sans text-sm text-white/60 hover:text-white transition-colors w-fit"
                 >
                   {link}
                 </a>
@@ -68,15 +68,15 @@ export function Footer() {
 
           {/* Contact Col */}
           <div className="md:col-span-4 flex flex-col gap-5">
-            <h4 className="font-['DM_Sans',sans-serif] font-semibold text-lg text-white mb-2">
+            <h4 className="font-sans font-semibold text-lg text-white mb-2">
               Get in Touch
             </h4>
-            <p className="font-['DM_Sans',sans-serif] text-sm text-white/60 leading-relaxed mb-2">
+            <p className="font-sans text-sm text-white/60 leading-relaxed mb-2">
               Looking for a technical partner or have a project in mind? Let's discuss how we can work together.
             </p>
             <a
               href={`mailto:${social.email}`}
-              className="font-['DM_Sans',sans-serif] font-medium text-[#2563eb] hover:text-blue-400 transition-colors w-fit flex items-center gap-2"
+              className="font-sans font-medium text-[#2563eb] hover:text-blue-400 transition-colors w-fit flex items-center gap-2"
             >
               <Mail size={16} />
               {social.email}
@@ -86,11 +86,11 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="font-['DM_Sans',sans-serif] text-white/40 text-xs text-center md:text-left">
+          <p className="font-sans text-white/40 text-xs text-center md:text-left">
             &copy; {currentYear} Santhosh V. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <a href="#home" className="font-['DM_Sans',sans-serif] text-white/40 text-xs hover:text-white transition-colors">
+            <a href="#home" className="font-sans text-white/40 text-xs hover:text-white transition-colors">
               Back to Top &uarr;
             </a>
           </div>

@@ -1,7 +1,19 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { LenisProvider } from "@/components/providers/lenis-provider";
+import { DM_Sans, Inter } from "next/font/google";
 
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-dm-sans",
+  display: "swap",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
 export const viewport: Viewport = {
   themeColor: "#030213",
   width: "device-width",
@@ -85,7 +97,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${dmSans.variable} ${inter.variable}`}>
       <body>
         <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-white focus:text-black">
           Skip to content

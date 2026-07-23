@@ -121,10 +121,10 @@ export function HowItWorksSection() {
 
         {/* Header */}
         <div className="flex flex-col items-center text-center mb-28">
-          <h2 className="font-['DM_Sans',sans-serif] font-semibold text-[#111] text-3xl md:text-4xl tracking-[-1.5px] mb-4">
+          <h2 className="font-sans font-semibold text-[#111] text-3xl md:text-4xl tracking-[-1.5px] mb-4">
             How we'll work together.
           </h2>
-          <p className="font-['DM_Sans',sans-serif] text-[#4b5563] text-sm max-w-[340px] leading-relaxed">
+          <p className="font-sans text-[#4b5563] text-sm max-w-[340px] leading-relaxed">
             A simple, transparent process designed to keep things clear, efficient, and stress-free from start to finish.
           </p>
         </div>
@@ -146,13 +146,13 @@ export function HowItWorksSection() {
                       transition={{ duration: 0.4, ease: "easeOut" }}
                       className="absolute bottom-0 right-0"
                     >
-                      <span className="font-['DM_Sans',sans-serif] font-medium text-[40px] text-[#111] leading-none tracking-[-1px]">
+                      <span className="font-sans font-medium text-[40px] text-[#111] leading-none tracking-[-1px]">
                         {steps[activeStep].num}
                       </span>
                     </motion.div>
                   </AnimatePresence>
                 </div>
-                <span className="font-['DM_Sans',sans-serif] font-normal text-xs text-[#4b5563] mb-[6px]">
+                <span className="font-sans font-normal text-xs text-[#4b5563] mb-[6px]">
                   /05
                 </span>
               </div>
@@ -222,10 +222,10 @@ function StepItem({
         <div className="mb-2">
           {step.icon}
         </div>
-        <h3 className={`font-['DM_Sans',sans-serif] font-medium text-xl tracking-[-0.5px] transition-colors duration-500 ${isActive ? 'text-[#111]' : 'text-[#4b5563]'}`}>
+        <h3 className={`font-sans font-medium text-xl tracking-[-0.5px] transition-colors duration-500 ${isActive ? 'text-[#111]' : 'text-[#4b5563]'}`}>
           {step.title}
         </h3>
-        <p className="font-['DM_Sans',sans-serif] text-[#4b5563] text-sm leading-relaxed">
+        <p className="font-sans text-[#4b5563] text-sm leading-relaxed">
           {step.desc}
         </p>
       </motion.div>

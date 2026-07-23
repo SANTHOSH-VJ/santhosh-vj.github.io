@@ -28,12 +28,12 @@ export function ExperienceSection() {
         {/* Header */}
         <div className="flex flex-col items-center text-center mb-16 md:mb-20">
           <div className="bg-white border border-[#ededed] rounded-full px-5 py-2 inline-flex mb-4">
-            <span className="font-['DM_Sans',sans-serif] font-medium text-[#111] text-sm">Experience</span>
+            <span className="font-sans font-medium text-[#111] text-sm">Experience</span>
           </div>
-          <h2 className="font-['DM_Sans',sans-serif] font-semibold text-[#111] text-3xl md:text-4xl tracking-[-1.2px] mb-4">
+          <h2 className="font-sans font-semibold text-[#111] text-3xl md:text-4xl tracking-[-1.2px] mb-4">
             Where I've worked
           </h2>
-          <p className="font-['DM_Sans',sans-serif] text-[#4b5563] text-base max-w-sm leading-relaxed tracking-[-0.32px]">
+          <p className="font-sans text-[#4b5563] text-base max-w-sm leading-relaxed tracking-[-0.32px]">
             Hands-on roles where I've shipped real impact.
           </p>
         </div>
@@ -58,7 +58,7 @@ export function ExperienceSection() {
                 <div className="bg-[#f7f7f7] border border-transparent rounded-[30px] p-6 md:p-8 hover:border-[#ededed] transition-colors duration-300">
                   <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
                     <div>
-                      <h3 className="text-[#111] text-xl md:text-2xl font-bold font-['DM_Sans',sans-serif] tracking-tight">
+                      <h3 className="text-[#111] text-xl md:text-2xl font-bold font-sans tracking-tight">
                         {exp.role} <span className="text-[#4b5563] font-medium">· {exp.company}</span>
                       </h3>
                     </div>
@@ -73,7 +73,7 @@ export function ExperienceSection() {
                         <svg className="w-[12px] h-[12px] text-[#2563eb] shrink-0 mt-[6px]" viewBox="0 0 24 24" fill="currentColor">
                           <path d="M8 5v14l11-7z" />
                         </svg>
-                        <p className="text-[#333] text-[15px] leading-relaxed font-['DM_Sans',sans-serif]">
+                        <p className="text-[#333] text-[15px] leading-relaxed font-sans">
                           {desc}
                         </p>
                       </div>

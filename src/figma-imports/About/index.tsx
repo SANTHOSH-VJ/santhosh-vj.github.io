@@ -304,7 +304,7 @@ function Component2PZihxu6KJkHzZ9U6V8XpBphV4WWebp() {
                   </g>
                 </svg>
               </div>
-              <p className="[word-break:break-word] absolute bottom-[-5px] font-['Inter:Regular',sans-serif] font-normal leading-[normal] left-[-28px] not-italic right-[-28px] text-[16px] text-black text-center translate-y-full">Amazon Kinesis</p>
+              <p className="[word-break:break-word] absolute bottom-[-5px] font-mono font-normal leading-[normal] left-[-28px] not-italic right-[-28px] text-[16px] text-black text-center translate-y-full">Amazon Kinesis</p>
             </div>
           </div>
         </div>
@@ -338,7 +338,7 @@ function Component2PZihxu6KJkHzZ9U6V8XpBphV4WWebp2() {
                   </g>
                 </svg>
               </div>
-              <p className="[word-break:break-word] absolute bottom-[-5.14px] font-['Inter:Regular',sans-serif] font-normal leading-[normal] left-[-28.81px] not-italic right-[-28.81px] text-[16.46px] text-black text-center translate-y-full">Amazon Kinesis</p>
+              <p className="[word-break:break-word] absolute bottom-[-5.14px] font-mono font-normal leading-[normal] left-[-28.81px] not-italic right-[-28.81px] text-[16.46px] text-black text-center translate-y-full">Amazon Kinesis</p>
             </div>
           </div>
         </div>

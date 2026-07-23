@@ -10,7 +10,7 @@ export function TechSkillTile({ label, slug, localIcon }: { label: string; slug:
           <img src={`https://api.iconify.design/${slug}.svg`} alt={label} className="w-full h-full object-contain" />
         )}
       </div>
-      <span className="font-['DM_Sans',sans-serif] font-medium text-[#111] text-[9.5px] text-center leading-tight tracking-[-0.19px]">
+      <span className="font-sans font-medium text-[#111] text-[9.5px] text-center leading-tight tracking-[-0.19px]">
         {label}
       </span>
     </div>

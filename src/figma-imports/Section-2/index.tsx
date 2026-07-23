@@ -343,7 +343,7 @@ function Svg11() {
 function Heading() {
   return (
     <div className="content-stretch drop-shadow-[0px_4px_1.5px_rgba(0,0,0,0.1),0px_10px_4px_rgba(0,0,0,0.04)] flex flex-col items-start w-fit relative" data-name="Heading 1">
-      <h1 className="[word-break:break-word] flex flex-col font-['Inter:Extra_Bold',sans-serif] font-extrabold justify-center leading-[0] not-italic relative text-[32px] md:text-[40px] text-white tracking-[-1px] whitespace-normal w-fit">
+      <h1 className="[word-break:break-word] flex flex-col font-mono font-extrabold justify-center leading-[0] not-italic relative text-[32px] md:text-[40px] text-white tracking-[-1px] whitespace-normal w-fit">
         <span className="leading-tight md:leading-[46px] mb-0 block">Building The Future with Cloud,</span>
         <span className="leading-tight md:leading-[46px] mb-0 block">Automation, and Ambition</span>
       </h1>
@@ -354,7 +354,7 @@ function Heading() {
 function Container3() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-fit" data-name="Container">
-      <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[20px] text-[rgba(255,255,255,0.85)] tracking-[0.2px] w-fit">
+      <div className="[word-break:break-word] flex flex-col font-mono font-medium justify-center leading-[0] not-italic relative shrink-0 text-[20px] text-[rgba(255,255,255,0.85)] tracking-[0.2px] w-fit">
         <p className="leading-[30px]">Dream, Build, Deploy.</p>
       </div>
     </div>
@@ -381,7 +381,7 @@ function Button() {
   return (
     <a href="#projects" className="bg-gradient-to-r content-stretch flex flex-col from-[#2563eb] items-center justify-center px-[28px] py-[12px] relative rounded-[9999px] shrink-0 to-[#3b82f6] cursor-pointer hover:shadow-lg hover:brightness-110 transition-all duration-200" data-name="Button">
       <div className="absolute bg-[rgba(255,255,255,0)] inset-0 rounded-[9999px] shadow-[0px_10px_15px_-3px_rgba(37,99,235,0.4),0px_4px_6px_-4px_rgba(37,99,235,0.4)]" data-name="Button:shadow" />
-      <div className="[word-break:break-word] flex flex-col font-['Inter:Semi_Bold',sans-serif] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-center text-white w-[112.005px]">
+      <div className="[word-break:break-word] flex flex-col font-mono font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-center text-white w-[112.005px]">
         <p className="leading-[24px]">View My Work</p>
       </div>
     </a>
@@ -392,7 +392,7 @@ function Button1() {
   return (
     <a href="/Santhosh_Resume.pdf" download="Santhosh_Resume.pdf" className="backdrop-blur-[6px] bg-[rgba(255,255,255,0.12)] content-stretch flex flex-col items-center justify-center px-[28px] py-[12px] relative rounded-[9999px] shrink-0 hover:bg-[rgba(255,255,255,0.2)] transition-colors cursor-pointer" data-name="Button">
       <div aria-hidden className="absolute border border-[rgba(255,255,255,0.3)] border-solid inset-0 pointer-events-none rounded-[9999px]" />
-      <div className="[word-break:break-word] flex flex-col font-['Inter:Semi_Bold',sans-serif] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-center text-white tracking-[0.0313px] whitespace-nowrap">
+      <div className="[word-break:break-word] flex flex-col font-mono font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-center text-white tracking-[0.0313px] whitespace-nowrap">
         <p className="leading-[24px]">Download Resume</p>
       </div>
     </a>
@@ -500,7 +500,7 @@ function Svg13() {
 function Container7() {
   return (
     <div className="relative shrink-0" data-name="Container">
-      <span className="font-['Inter:Semi_Bold',sans-serif] font-semibold text-[16px] text-center text-white whitespace-nowrap">
+      <span className="font-mono font-semibold text-[16px] text-center text-white whitespace-nowrap">
         DOCKER
       </span>
     </div>
@@ -549,7 +549,7 @@ function Container8() {
 function Container9() {
   return (
     <div className="relative shrink-0" data-name="Container">
-      <span className="font-['Inter:Semi_Bold',sans-serif] font-semibold text-[16px] text-center text-white whitespace-nowrap">
+      <span className="font-mono font-semibold text-[16px] text-center text-white whitespace-nowrap">
         Terraform
       </span>
     </div>
@@ -602,7 +602,7 @@ function Svg15() {
 function Container10() {
   return (
     <div className="relative shrink-0" data-name="Container">
-      <span className="font-['Inter:Semi_Bold',sans-serif] font-semibold text-[16px] text-center text-white whitespace-nowrap tracking-[-0.0625px]">
+      <span className="font-mono font-semibold text-[16px] text-center text-white whitespace-nowrap tracking-[-0.0625px]">
         Github Actions
       </span>
     </div>
@@ -655,7 +655,7 @@ function Svg16() {
 function Container11() {
   return (
     <div className="relative shrink-0" data-name="Container">
-      <span className="font-['Inter:Semi_Bold',sans-serif] font-semibold text-[16px] text-center text-white whitespace-nowrap tracking-[0.0625px]">
+      <span className="font-mono font-semibold text-[16px] text-center text-white whitespace-nowrap tracking-[0.0625px]">
         Kubernetes
       </span>
     </div>
@@ -1512,7 +1512,7 @@ function Svg17() {
 function Container12() {
   return (
     <div className="relative shrink-0" data-name="Container">
-      <span className="font-['Inter:Semi_Bold',sans-serif] font-semibold text-[16px] text-center text-white whitespace-nowrap tracking-[0.4688px]">
+      <span className="font-mono font-semibold text-[16px] text-center text-white whitespace-nowrap tracking-[0.4688px]">
         LINUX
       </span>
     </div>

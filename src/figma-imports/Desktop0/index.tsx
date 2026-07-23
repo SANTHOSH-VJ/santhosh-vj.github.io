@@ -10,10 +10,10 @@ import { imgDivFramer1K87S } from "./svg-clv0y";
 function Headline() {
   return (
     <div className="flex flex-col gap-3 items-center text-center w-full max-w-[600px] mb-8" data-name="Headline">
-      <h2 className="font-['DM_Sans',sans-serif] font-semibold text-[#111] text-3xl md:text-4xl tracking-tight">
+      <h2 className="font-sans font-semibold text-[#111] text-3xl md:text-4xl tracking-tight">
         Backed by real work.
       </h2>
-      <p className="font-['DM_Sans',sans-serif] text-[#4b5563] text-sm md:text-base leading-relaxed">
+      <p className="font-sans text-[#4b5563] text-sm md:text-base leading-relaxed">
         A few highlights that reflect the quality, trust, and results behind my work.
       </p>
     </div>

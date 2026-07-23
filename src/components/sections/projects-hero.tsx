@@ -85,10 +85,10 @@ export function ProjectsHero() {
         }}
       >
         <div className="flex flex-col items-center gap-4">
-          <h2 className="font-['DM_Sans',sans-serif] font-bold text-[#111] text-4xl md:text-6xl tracking-tight leading-tight">
+          <h2 className="font-sans font-bold text-[#111] text-4xl md:text-6xl tracking-tight leading-tight">
             Real projects built in the cloud.
           </h2>
-          <p className="font-['DM_Sans',sans-serif] text-[#333] font-medium text-sm md:text-base max-w-lg leading-relaxed">
+          <p className="font-sans text-[#333] font-medium text-sm md:text-base max-w-lg leading-relaxed">
             A collection of cloud, DevOps, and full-stack projects showcasing scalable architectures, automation workflows, and practical engineering solutions.
           </p>
         </div>

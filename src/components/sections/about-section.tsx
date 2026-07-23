@@ -23,9 +23,9 @@ export function AboutSection() {
           >
             <div className="flex flex-col items-start gap-6">
               <div className="bg-[#f8fafc] border border-[#e2e8f0] shadow-sm rounded-full px-5 py-1.5 inline-flex">
-                <span className="font-['DM_Sans',sans-serif] font-bold text-[#475569] text-[11px] tracking-widest uppercase">About me</span>
+                <span className="font-sans font-bold text-[#475569] text-[11px] tracking-widest uppercase">About me</span>
               </div>
-              <h2 className="font-['DM_Sans',sans-serif] font-bold text-[#111] text-3xl md:text-4xl tracking-[-0.03em] leading-[1.15]">
+              <h2 className="font-sans font-bold text-[#111] text-3xl md:text-4xl tracking-[-0.03em] leading-[1.15]">
                 Building systems that last.
               </h2>
             </div>
@@ -45,9 +45,9 @@ export function AboutSection() {
                 </div>
 
                 <div className="flex flex-col items-center gap-1">
-                  <h3 className="font-['DM_Sans',sans-serif] font-bold text-[#111] text-lg">SANTHOSH V</h3>
-                  <p className="font-['DM_Sans',sans-serif] text-[#555] font-medium text-sm">Computer Science Engineering Student</p>
-                  <p className="font-['DM_Sans',sans-serif] text-[#888] text-xs">R.M.D. Engineering College</p>
+                  <h3 className="font-sans font-bold text-[#111] text-lg">SANTHOSH V</h3>
+                  <p className="font-sans text-[#555] font-medium text-sm">Computer Science Engineering Student</p>
+                  <p className="font-sans text-[#888] text-xs">R.M.D. Engineering College</p>
 
                   <div className="flex items-center justify-center gap-2 mt-3">
                     <span className="bg-[#eff6ff] text-[#2563eb] border border-[#bfdbfe] text-xs font-semibold px-3 py-1 rounded-full">Cloud Computing</span>
@@ -57,7 +57,7 @@ export function AboutSection() {
                   <a
                     href="/Santhosh_Resume.pdf"
                     download="Santhosh_Resume.pdf"
-                    className="mt-4 flex items-center justify-center gap-2 w-full bg-[#111] text-white hover:bg-[#222] transition-colors py-2.5 rounded-xl font-['DM_Sans',sans-serif] font-medium text-sm shadow-md group"
+                    className="mt-4 flex items-center justify-center gap-2 w-full bg-[#111] text-white hover:bg-[#222] transition-colors py-2.5 rounded-xl font-sans font-medium text-sm shadow-md group"
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-y-[2px] transition-transform duration-200"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                     Download Resume
@@ -73,7 +73,7 @@ export function AboutSection() {
             delay={0.2}
             className="lg:w-7/12 w-full flex flex-col justify-center lg:pt-16"
           >
-            <div className="font-['DM_Sans',sans-serif] text-[#4b5563] text-[13px] md:text-sm lg:text-base leading-[1.6] md:leading-[1.7]">
+            <div className="font-sans text-[#4b5563] text-[13px] md:text-sm lg:text-base leading-[1.6] md:leading-[1.7]">
               <p className="text-base md:text-lg lg:text-xl text-[#111] font-medium leading-[1.4] tracking-[-0.01em] mb-4 lg:mb-5">
                 I'm Santhosh V, a Computer Science Engineering student specializing in Cloud Computing at R.M.D. Engineering College. I enjoy building scalable cloud applications, automating infrastructure with DevOps practices, and developing reliable backend systems using AWS and modern web technologies.
               </p>
