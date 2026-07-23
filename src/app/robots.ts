@@ -7,7 +7,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
+      disallow: ["/api/", "/private/"],
     },
-    sitemap: "https://vjsanthosh.com/sitemap.xml",
+    sitemap: "https://santhosh-vj.github.io/sitemap.xml",
   };
 }

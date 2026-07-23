@@ -1,39 +1,81 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { LenisProvider } from "@/components/providers/lenis-provider";
 
+export const viewport: Viewport = {
+  themeColor: "#030213",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export const metadata: Metadata = {
-  title: "Santhosh V — Cloud & DevOps Engineer",
-  description:
-    "Portfolio of Santhosh V — Computer Science Engineering student specializing in Cloud Computing, AWS, DevOps, and scalable backend systems.",
+  metadataBase: new URL("https://santhosh-vj.github.io"),
+  title: {
+    default: "Santhosh V — Cloud Engineer & DevOps Specialist",
+    template: "%s | Santhosh V"
+  },
+  description: "Portfolio of Santhosh V, a Software Engineer specializing in Cloud Computing, AWS, DevOps, and scalable backend infrastructure. Graduate of R.M.D Engineering College.",
   keywords: [
     "Santhosh V",
-    "Cloud Engineer",
-    "DevOps",
-    "AWS",
-    "Portfolio",
-    "Backend Developer",
+    "Santhosh V Portfolio",
+    "Santhosh V GitHub",
+    "Santhosh V LinkedIn",
+    "Santhosh V RMD",
+    "Santhosh V Cloud Engineer",
+    "Santhosh V DevOps Engineer",
+    "Santhosh V Software Engineer"
   ],
-  authors: [{ name: "Santhosh V" }],
+  authors: [{ name: "Santhosh V", url: "https://santhosh-vj.github.io" }],
+  creator: "Santhosh V",
+  publisher: "Santhosh V",
+  applicationName: "Santhosh V Portfolio",
+  category: "technology",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Santhosh V — Cloud & DevOps Engineer",
-    description:
-      "Building reliable cloud-native applications, CI/CD pipelines, and scalable infrastructure.",
-    type: "website",
+    title: "Santhosh V — Cloud Engineer & DevOps Specialist",
+    description: "Building reliable cloud-native applications, CI/CD pipelines, and scalable infrastructure. Explore my projects and certifications.",
+    url: "https://santhosh-vj.github.io",
+    siteName: "Santhosh V Portfolio",
+    images: [
+      {
+        url: "/og-image.jpg", 
+        width: 1200,
+        height: 630,
+        alt: "Santhosh V - Cloud & DevOps Engineer Portfolio",
+      },
+    ],
     locale: "en_US",
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Santhosh V — Cloud & DevOps Engineer",
-    description:
-      "Building reliable cloud-native applications, CI/CD pipelines, and scalable infrastructure.",
+    title: "Santhosh V — Cloud Engineer & DevOps Specialist",
+    description: "Building reliable cloud-native applications, CI/CD pipelines, and scalable infrastructure.",
+    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   icons: {
-    icon: "/favicon.png",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.png",
+    apple: "/apple-touch-icon.png",
+  },
+  verification: {
+    other: {
+      "msvalidate.01": "2B4788D47C03A62F7FD43186A3200FE3",
+    }
   },
 };
 

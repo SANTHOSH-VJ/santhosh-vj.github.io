@@ -42,8 +42,9 @@ export function AboutSection() {
                 <div className="size-20 rounded-full overflow-hidden border-4 border-white shadow-xl relative group-hover:scale-105 transition-transform duration-500 bg-[#e5e5e5]">
                   <Image
                     src={images.santhoshPortraitSuit}
-                    alt="Santhosh V"
+                    alt="Santhosh V - Cloud & DevOps Engineer Portrait"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover object-top"
                   />
                 </div>
@@ -81,7 +82,7 @@ export function AboutSection() {
           >
             <div className="font-['DM_Sans',sans-serif] text-[#4b5563] text-[13px] md:text-sm lg:text-base leading-[1.6] md:leading-[1.7]">
               <p className="text-base md:text-lg lg:text-xl text-[#111] font-medium leading-[1.4] tracking-[-0.01em] mb-4 lg:mb-5">
-                I'm a Computer Science Engineering student specializing in Cloud Computing. My interest has never been limited to writing code—I enjoy understanding how software is deployed, scaled, automated, and kept reliable in production.
+                I'm Santhosh V, a Computer Science Engineering student specializing in Cloud Computing at R.M.D. Engineering College. I enjoy building scalable cloud applications, automating infrastructure with DevOps practices, and developing reliable backend systems using AWS and modern web technologies.
               </p>
 
               <p className="mb-3 lg:mb-4">
