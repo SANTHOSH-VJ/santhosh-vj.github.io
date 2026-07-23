@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import svgPaths from "./svg-nt427q6i2s";
-const imgBadgeAwsCloudPractitioner = "/assets/images/badge-aws-cloud-practitioner.png";
-const imgBadgeServicenowSystemAdmin = "/assets/images/badge-servicenow-system-admin.png";
-const imgBadgeCertifiedApplicationDeveloper = "/assets/images/certified-application-developer-cad.png";
-const imgBadgeOciArchitectAssociate = "/assets/images/badge-oci-architect-associate.png";
+const imgBadgeAwsCloudPractitioner = "/assets/images/badge-aws-cloud-practitioner.webp";
+const imgBadgeServicenowSystemAdmin = "/assets/images/badge-servicenow-system-admin.webp";
+const imgBadgeCertifiedApplicationDeveloper = "/assets/images/certified-application-developer-cad.webp";
+const imgBadgeOciArchitectAssociate = "/assets/images/badge-oci-architect-associate.webp";
 import { imgDivFramer1K87S } from "./svg-clv0y";
 
 function Headline() {

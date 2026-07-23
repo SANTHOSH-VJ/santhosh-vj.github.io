@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import svgPaths from "./svg-sqycjev8l6";
-const imgAbstractGreenWaves = "/assets/images/abstract-green-waves.png";
-const imgYewTreeBranches = "/assets/images/yew-tree-branches.png";
+const imgAbstractGreenWaves = "/assets/images/abstract-green-waves.webp";
+const imgYewTreeBranches = "/assets/images/yew-tree-branches.webp";
 import { imgBlur } from "./svg-3dold";
 
 function PFramerText() {

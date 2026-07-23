@@ -69,7 +69,7 @@ export function ProjectsSection() {
                 </h3>
                 
                 <p 
-                  className="font-['DM_Sans',sans-serif] text-[#6c7179] text-sm lg:text-base tracking-[-0.24px] leading-relaxed mb-6 max-w-lg"
+                  className="font-['DM_Sans',sans-serif] text-[#374151] text-sm lg:text-base tracking-[-0.24px] leading-relaxed mb-6 max-w-lg"
                   style={{ fontVariationSettings: '"opsz" 14' }}
                 >
                   {p.desc}

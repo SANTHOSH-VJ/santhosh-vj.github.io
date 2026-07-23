@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import svgPaths from "./svg-0dvnpl28l3";
-const imgCloudTextureMask = "/assets/images/cloud-texture-mask.png";
+const imgCloudTextureMask = "/assets/images/cloud-texture-mask.webp";
 import { maskRectLarge, maskRectSmall1, maskRectSmall2 } from "./svg-jsc79";
 
 function Group() {

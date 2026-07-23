@@ -92,6 +92,7 @@ export function ContactSection() {
               />
               <button 
                 type="submit"
+                aria-label="Submit email"
                 disabled={status === "submitting" || status === "success"}
                 className="absolute right-2 md:right-3 top-1/2 -translate-y-1/2 size-8 md:size-10 bg-[#f1f5f9] group-focus-within:bg-[#2563eb] group-focus-within:text-white rounded-full flex items-center justify-center text-[#64748b] group-focus-within:shadow-[0_4px_14px_rgba(37,99,235,0.3)] transition-all duration-300 disabled:opacity-50"
               >
