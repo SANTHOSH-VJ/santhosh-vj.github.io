@@ -119,7 +119,7 @@ function Header() {
 
 function Content1() {
   return (
-    <div className="bg-[#f7f7f7] content-stretch flex flex-col items-start justify-between overflow-clip pb-[29px] relative rounded-[30px] flex-1 w-full h-full" data-name="Content">
+    <div className="bg-[#f7f7f7] content-stretch flex flex-col items-start justify-between overflow-clip pb-[29px] relative rounded-[30px] flex-1 w-full h-full hover:scale-[1.02] transition-transform duration-300" data-name="Content">
       <Header />
     </div>
   );
@@ -320,7 +320,7 @@ function Header1() {
 
 function Content2() {
   return (
-    <div className="bg-[#f7f7f7] content-stretch flex flex-col items-start justify-between overflow-clip pb-[26px] relative rounded-[30px] flex-1 w-full h-full" data-name="Content">
+    <div className="bg-[#f7f7f7] content-stretch flex flex-col items-start justify-between overflow-clip pb-[26px] relative rounded-[30px] flex-1 w-full h-full hover:scale-[1.02] transition-transform duration-300" data-name="Content">
       <Header1 />
     </div>
   );
@@ -482,7 +482,7 @@ function Header2() {
 
 function Content3() {
   return (
-    <div className="bg-[#f7f7f7] content-stretch flex flex-col items-start justify-between overflow-clip pb-[29px] relative rounded-[30px] flex-1 w-full h-full" data-name="Content">
+    <div className="bg-[#f7f7f7] content-stretch flex flex-col items-start justify-between overflow-clip pb-[29px] relative rounded-[30px] flex-1 w-full h-full hover:scale-[1.02] transition-transform duration-300" data-name="Content">
       <Header2 />
     </div>
   );
@@ -545,7 +545,7 @@ function TrustedByMany() {
 
 function Content() {
   return (
-    <div className="content-stretch grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch justify-center min-h-[436px] overflow-hidden relative w-full" data-name="Content">
+    <div className="content-stretch grid grid-cols-1 md:grid-cols-3 gap-8 items-start justify-center overflow-hidden relative w-full" data-name="Content">
       <FeaturedTemplate />
       <TopFreelancer />
       <TrustedByMany />
