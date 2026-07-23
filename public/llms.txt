@@ -1,25 +1,31 @@
 # Santhosh V Portfolio
 
-## Official Links
+Official portfolio of Santhosh V.
 
-- Portfolio: https://santhosh-vj.github.io
-- GitHub: https://github.com/SANTHOSH-VJ
-- LinkedIn: https://www.linkedin.com/in/vjsanthosh/
+## Website
+
+- https://santhosh-vj.github.io
+
+## GitHub
+
+- https://github.com/SANTHOSH-VJ
+
+## LinkedIn
+
+- https://linkedin.com/in/vjsanthosh
 
 ## Projects
 
-- Kuttylink Dashboard (Full-stack URL Shortener)
-- Serverless Event-Driven Architecture (AWS)
-- End-to-End CI/CD Pipeline & Monitoring
+- AWS Serverless Storage
+- URL Shortener SaaS
+- CI/CD Internship
 
 ## Certifications
 
-- AWS Certified Cloud Practitioner
-- ServiceNow Certified System Administrator
-- ServiceNow Certified Application Developer
-- Oracle Cloud Infrastructure Architect Associate
+- AWS Cloud Practitioner
+- Oracle OCI Architect Associate
+- ServiceNow CSA
 
 ## Contact
 
-- Email: vjsanthosh.33@gmail.com
-- Link: https://santhosh-vj.github.io/#contact
+https://santhosh-vj.github.io/#contact

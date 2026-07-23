@@ -16,6 +16,7 @@ const projects = [
       "Lambda functions behind API Gateway",
       "CI/CD with AWS Amplify"
     ],
+    buttonText: "View AWS Serverless Storage Project",
     link: "https://github.com/SANTHOSH-VJ/aws-serverless-cloud-storage.git"
   },
   {
@@ -29,6 +30,7 @@ const projects = [
       "User accounts and dashboards",
       "Cloud-deployed with monitoring"
     ],
+    buttonText: "View URL Shortener SaaS Project",
     link: "https://github.com/SANTHOSH-VJ/url-saas.git"
   },
   {
@@ -41,6 +43,7 @@ const projects = [
       "Automated testing",
       "Containerization with Docker"
     ],
+    buttonText: "View CI/CD Pipeline Project",
     link: "https://github.com/SANTHOSH-VJ/ziffity_Intern.git"
   },
 ];
@@ -84,13 +87,13 @@ export function ProjectsSection() {
                 </div>
 
                 <div className="mb-8 p-6 bg-[#f8fafc] rounded-2xl border border-[#f1f5f9]">
-                  <h4 className="font-['DM_Sans',sans-serif] text-[11px] tracking-[0.15em] text-[#0891b2] uppercase font-bold mb-4">
+                  <h4 className="font-['DM_Sans',sans-serif] text-[11px] tracking-[0.15em] text-[#0f766e] uppercase font-bold mb-4">
                     Features
                   </h4>
                   <ul className="flex flex-col gap-3">
                     {p.features.map((f, idx) => (
                       <li key={idx} className="font-['DM_Sans',sans-serif] text-[#555] text-sm flex items-start gap-3 leading-snug">
-                        <svg className="w-4 h-4 mt-0.5 text-[#0891b2] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg className="w-4 h-4 mt-0.5 text-[#0f766e] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
                         </svg>
                         <span>{f}</span>
@@ -105,7 +108,7 @@ export function ProjectsSection() {
                   rel="noopener noreferrer"
                   className="bg-gradient-to-b from-[#2563eb] to-[#3b82f6] text-white font-['DM_Sans',sans-serif] font-medium text-xs lg:text-sm px-5 py-2.5 rounded-full w-fit flex items-center gap-2 hover:opacity-90 transition-opacity cursor-pointer"
                 >
-                  View Project <ArrowRight size={12} />
+                  {p.buttonText} <ArrowRight size={12} />
                 </a>
               </div>
 

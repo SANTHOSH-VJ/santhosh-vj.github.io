@@ -22,9 +22,11 @@ async function optimizeImages() {
       let pipeline = sharp(filePath);
       const metadata = await pipeline.metadata();
       
-      // Resize oversized images
-      // Backgrounds & Portraits
-      if (metadata.width > 1200) {
+      if (name.includes('abstract-green-waves') || name.includes('yew-tree-branches')) {
+        pipeline = pipeline.resize(300, null, { withoutEnlargement: true });
+      } else if (name.includes('cloud-texture-mask')) {
+        pipeline = pipeline.resize(800, null, { withoutEnlargement: true });
+      } else if (metadata.width > 1200) {
         pipeline = pipeline.resize(1200, null, { withoutEnlargement: true });
       }
 

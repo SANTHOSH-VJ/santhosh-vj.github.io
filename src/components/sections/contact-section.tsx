@@ -117,6 +117,7 @@ export function ContactSection() {
               <button
                 type="submit"
                 disabled={status === "submitting" || status === "success"}
+                aria-label="Submit email"
                 className="bg-[#2563eb] text-white font-['Inter',sans-serif] font-semibold text-sm px-6 py-3 rounded-[8px] md:rounded-[12px] hover:bg-[#1d4ed8] transition-all duration-200 shadow-[0_4px_14px_rgba(37,99,235,0.2)] hover:shadow-[0_6px_20px_rgba(37,99,235,0.3)] disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {step === 1 ? "Next Step" : status === "submitting" ? "Sending..." : "Send Message"}
