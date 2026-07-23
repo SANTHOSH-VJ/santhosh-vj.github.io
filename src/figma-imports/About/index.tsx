@@ -562,7 +562,7 @@ function GRufuRrPsKhXiw8Rc4UuwKbiIoUWebp() {
     <div className="h-[99.997px] overflow-clip relative rounded-[12px] shrink-0 w-full" data-name="gRUFURrPSKhXiw8rc4UUWKbiIoU.webp">
       <div aria-hidden className="absolute inset-0 pointer-events-none rounded-[12px]">
         <div className="absolute inset-0 overflow-hidden rounded-[12px]">
-          <Image alt="" className="absolute h-[113.08%] left-0 max-w-none top-[-6.54%] w-full" src={imgAbstractGreenWaves} fill sizes="100vw" />
+          <Image alt="" className="absolute inset-0 size-full object-cover" src={imgAbstractGreenWaves} fill sizes="100vw" />
         </div>
         <div className="absolute bg-[#c925d1] inset-0 rounded-[12px]" />
       </div>
@@ -592,7 +592,7 @@ function GRufuRrPsKhXiw8Rc4UuwKbiIoUWebp1() {
     <div className="h-[100.006px] overflow-clip relative rounded-[12px] shrink-0 w-full" data-name="gRUFURrPSKhXiw8rc4UUWKbiIoU.webp">
       <div aria-hidden className="absolute inset-0 pointer-events-none rounded-[12px]">
         <div className="absolute inset-0 overflow-hidden rounded-[12px]">
-          <Image alt="" className="absolute h-[113.07%] left-0 max-w-none top-[-6.53%] w-full" src={imgAbstractGreenWaves} fill sizes="100vw" />
+          <Image alt="" className="absolute inset-0 size-full object-cover" src={imgAbstractGreenWaves} fill sizes="100vw" />
         </div>
         <div className="absolute bg-[#c925d1] inset-0 rounded-[12px]" />
       </div>
@@ -635,7 +635,7 @@ function W14MEvxhiFsxPXqsaySvrmOl63WWebp() {
     <div className="h-[99.998px] overflow-clip relative rounded-[12px] shrink-0 w-[79.997px]" data-name="W14MEvxhiFsxPXqsaySVRMOl63w.webp">
       <div aria-hidden className="absolute inset-0 pointer-events-none rounded-[12px]">
         <div className="absolute inset-0 overflow-hidden rounded-[12px]">
-          <Image alt="" className="absolute h-[100.03%] left-0 max-w-none top-[-0.01%] w-full" src={imgYewTreeBranches} fill sizes="100vw" />
+          <Image alt="" className="absolute inset-0 size-full object-cover" src={imgYewTreeBranches} fill sizes="100vw" />
         </div>
         <div className="absolute bg-[#e7157b] inset-0 rounded-[12px]" />
       </div>
@@ -665,7 +665,7 @@ function W14MEvxhiFsxPXqsaySvrmOl63WWebp1() {
     <div className="h-[100.004px] overflow-clip relative rounded-[12px] shrink-0 w-full" data-name="W14MEvxhiFsxPXqsaySVRMOl63w.webp">
       <div aria-hidden className="absolute inset-0 pointer-events-none rounded-[12px]">
         <div className="absolute inset-0 overflow-hidden rounded-[12px]">
-          <Image alt="" className="absolute h-[100.02%] left-0 max-w-none top-[-0.01%] w-full" src={imgYewTreeBranches} fill sizes="100vw" />
+          <Image alt="" className="absolute inset-0 size-full object-cover" src={imgYewTreeBranches} fill sizes="100vw" />
         </div>
         <div className="absolute bg-[#e7157b] inset-0 rounded-[12px]" />
       </div>

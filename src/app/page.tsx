@@ -1,15 +1,17 @@
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { HeroSection } from "@/components/sections/hero-section";
-import { OrbitSection } from "@/components/sections/orbit-section";
-import { CertificationsSection } from "@/components/sections/certifications-section";
-import { ProjectsHero } from "@/components/sections/projects-hero";
-import { AboutSection } from "@/components/sections/about-section";
-import { TechnologiesSection } from "@/components/sections/technologies-section";
-import { ProjectsSection } from "@/components/sections/projects-section";
-import { ExperienceSection } from "@/components/sections/experience-section";
-import { HowItWorksSection } from "@/components/sections/how-it-works-section";
-import { ContactSection } from "@/components/sections/contact-section";
+import dynamic from 'next/dynamic';
+
+const OrbitSection = dynamic(() => import('@/components/sections/orbit-section').then(mod => mod.OrbitSection));
+const CertificationsSection = dynamic(() => import('@/components/sections/certifications-section').then(mod => mod.CertificationsSection));
+const ProjectsHero = dynamic(() => import('@/components/sections/projects-hero').then(mod => mod.ProjectsHero));
+const AboutSection = dynamic(() => import('@/components/sections/about-section').then(mod => mod.AboutSection));
+const TechnologiesSection = dynamic(() => import('@/components/sections/technologies-section').then(mod => mod.TechnologiesSection));
+const ProjectsSection = dynamic(() => import('@/components/sections/projects-section').then(mod => mod.ProjectsSection));
+const ExperienceSection = dynamic(() => import('@/components/sections/experience-section').then(mod => mod.ExperienceSection));
+const HowItWorksSection = dynamic(() => import('@/components/sections/how-it-works-section').then(mod => mod.HowItWorksSection));
+const ContactSection = dynamic(() => import('@/components/sections/contact-section').then(mod => mod.ContactSection));
 
 export default function Home() {
   return (

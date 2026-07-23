@@ -1,10 +1,34 @@
-# Santhosh V Portfolio
+﻿# Santhosh V Portfolio
 
-Official portfolio of Santhosh V.
+Official portfolio of Santhosh V, Cloud & DevOps Engineer.
 
 ## Website
 
-- https://santhosh-vj.github.io
+- https://santhosh-vj.github.io/
+
+## About
+
+- https://santhosh-vj.github.io/#about
+
+## Skills
+
+- https://santhosh-vj.github.io/#skills
+
+## Projects
+
+- https://santhosh-vj.github.io/#projects
+
+## Experience
+
+- https://santhosh-vj.github.io/#experience
+
+## Certifications
+
+- https://santhosh-vj.github.io/#certifications
+
+## Contact
+
+- https://santhosh-vj.github.io/#contact
 
 ## GitHub
 
@@ -12,20 +36,8 @@ Official portfolio of Santhosh V.
 
 ## LinkedIn
 
-- https://linkedin.com/in/vjsanthosh
+- https://www.linkedin.com/in/vjsanthosh/
 
-## Projects
+## Resume
 
-- AWS Serverless Storage
-- URL Shortener SaaS
-- CI/CD Internship
-
-## Certifications
-
-- AWS Cloud Practitioner
-- Oracle OCI Architect Associate
-- ServiceNow CSA
-
-## Contact
-
-https://santhosh-vj.github.io/#contact
+- https://santhosh-vj.github.io/Santhosh_Resume.pdf

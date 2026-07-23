@@ -13,7 +13,7 @@ function Headline() {
       <h2 className="font-['DM_Sans',sans-serif] font-semibold text-[#111] text-3xl md:text-4xl tracking-tight">
         Backed by real work.
       </h2>
-      <p className="font-['DM_Sans',sans-serif] text-[#6c7179] text-sm md:text-base leading-relaxed">
+      <p className="font-['DM_Sans',sans-serif] text-[#4b5563] text-sm md:text-base leading-relaxed">
         A few highlights that reflect the quality, trust, and results behind my work.
       </p>
     </div>
@@ -67,7 +67,7 @@ function PFramerText2() {
 function PFramerText3() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="p.framer-text">
-      <div className="[word-break:break-word] flex flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#6c7179] text-[12px] tracking-[-0.24px] w-full" style={{ fontVariationSettings: '"opsz" 14' }}>
+      <div className="[word-break:break-word] flex flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#4b5563] text-[12px] tracking-[-0.24px] w-full" style={{ fontVariationSettings: '"opsz" 14' }}>
         <p className="leading-[16.8px]">Validated foundational knowledge of AWS Cloud, core services, security, and cloud architecture.</p>
       </div>
     </div>
@@ -77,7 +77,7 @@ function PFramerText3() {
 function PFramerText4() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="p.framer-text">
-      <div className="[word-break:break-word] flex flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#6c7179] text-[11px] tracking-[-0.24px] w-full" style={{ fontVariationSettings: '"opsz" 14' }}>
+      <div className="[word-break:break-word] flex flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#4b5563] text-[11px] tracking-[-0.24px] w-full" style={{ fontVariationSettings: '"opsz" 14' }}>
         <p className="leading-[16.8px]">Amazon Web Services · 2026</p>
       </div>
     </div>
@@ -265,7 +265,7 @@ function Credentials() {
 function PFramerText9() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="p.framer-text">
-      <div className="[word-break:break-word] flex flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#6c7179] text-[12px] tracking-[-0.24px] w-full" style={{ fontVariationSettings: '"opsz" 14' }}>
+      <div className="[word-break:break-word] flex flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#4b5563] text-[12px] tracking-[-0.24px] w-full" style={{ fontVariationSettings: '"opsz" 14' }}>
         <p className="leading-[16.8px]">Platform administration and application development credentials covering the ServiceNow ecosystem.</p>
       </div>
     </div>
@@ -275,7 +275,7 @@ function PFramerText9() {
 function PFramerText10() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="p.framer-text">
-      <div className="[word-break:break-word] flex flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#6c7179] text-[11px] tracking-[-0.24px] w-full" style={{ fontVariationSettings: '"opsz" 14' }}>
+      <div className="[word-break:break-word] flex flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#4b5563] text-[11px] tracking-[-0.24px] w-full" style={{ fontVariationSettings: '"opsz" 14' }}>
         <p className="leading-[16.8px]">ServiceNow · 2026</p>
       </div>
     </div>
@@ -428,7 +428,7 @@ function PFramerText13() {
 function PFramerText14() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="p.framer-text">
-      <div className="[word-break:break-word] flex flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#6c7179] text-[12px] tracking-[-0.24px] w-full" style={{ fontVariationSettings: '"opsz" 14' }}>
+      <div className="[word-break:break-word] flex flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#4b5563] text-[12px] tracking-[-0.24px] w-full" style={{ fontVariationSettings: '"opsz" 14' }}>
         <p className="leading-[16.8px]">Validated cloud architecture skills for designing secure, scalable, and reliable solutions on Oracle Cloud Infrastructure.</p>
       </div>
     </div>
@@ -438,7 +438,7 @@ function PFramerText14() {
 function PFramerText15() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="p.framer-text">
-      <div className="[word-break:break-word] flex flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#6c7179] text-[11px] tracking-[-0.24px] w-full" style={{ fontVariationSettings: '"opsz" 14' }}>
+      <div className="[word-break:break-word] flex flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#4b5563] text-[11px] tracking-[-0.24px] w-full" style={{ fontVariationSettings: '"opsz" 14' }}>
         <p className="leading-[16.8px]">Oracle · 2025</p>
       </div>
     </div>
@@ -461,7 +461,7 @@ function BadgeSlots2() {
     <div className="content-stretch flex items-start overflow-clip relative shrink-0" data-name="Badge Slots">
       <div className="h-[51px] relative shrink-0 w-[52px]" data-name="OCI25CAA_s1zpar 1">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <Image alt="" className="absolute h-full left-[-49.06%] max-w-none top-0 w-[196.23%]" src={imgBadgeOciArchitectAssociate} fill sizes="100vw" />
+          <Image alt="" className="absolute inset-0 size-full object-contain" src={imgBadgeOciArchitectAssociate} fill sizes="100vw" />
         </div>
       </div>
     </div>

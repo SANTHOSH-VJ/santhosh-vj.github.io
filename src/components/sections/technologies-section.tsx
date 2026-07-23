@@ -83,7 +83,7 @@ export function TechnologiesSection() {
                 <h3 className="font-['DM_Sans',sans-serif] font-medium text-[#111] text-lg tracking-[-0.36px]">
                   {cat.title}
                 </h3>
-                <p className="font-['DM_Sans',sans-serif] text-[#6c7179] text-xs tracking-[-0.24px] mt-1">
+                <p className="font-['DM_Sans',sans-serif] text-[#4b5563] text-xs tracking-[-0.24px] mt-1">
                   {cat.desc}
                 </p>
               </div>

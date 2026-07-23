@@ -35,7 +35,7 @@ export function ExperienceSection() {
           <h2 className="font-['DM_Sans',sans-serif] font-semibold text-[#111] text-3xl md:text-4xl tracking-[-1.2px] mb-4">
             Where I've worked
           </h2>
-          <p className="font-['DM_Sans',sans-serif] text-[#6c7179] text-base max-w-sm leading-relaxed tracking-[-0.32px]">
+          <p className="font-['DM_Sans',sans-serif] text-[#4b5563] text-base max-w-sm leading-relaxed tracking-[-0.32px]">
             Hands-on roles where I've shipped real impact.
           </p>
         </div>
@@ -63,10 +63,10 @@ export function ExperienceSection() {
                   <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
                     <div>
                       <h3 className="text-[#111] text-xl md:text-2xl font-bold font-['DM_Sans',sans-serif] tracking-tight">
-                        {exp.role} <span className="text-[#6c7179] font-medium">· {exp.company}</span>
+                        {exp.role} <span className="text-[#4b5563] font-medium">· {exp.company}</span>
                       </h3>
                     </div>
-                    <div className="font-mono text-xs md:text-sm text-[#6c7179]">
+                    <div className="font-mono text-xs md:text-sm text-[#4b5563]">
                       {exp.date}
                     </div>
                   </div>

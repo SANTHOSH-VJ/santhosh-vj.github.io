@@ -75,7 +75,7 @@ export function ContactSection() {
         </p>
 
         <div className="w-full max-w-xl flex flex-col items-center gap-4">
-          <span className="font-['DM_Sans',sans-serif] text-[#64748b] text-[10px] md:text-xs font-bold tracking-[0.1em] uppercase mb-2">
+          <span className="font-['DM_Sans',sans-serif] text-[#4b5563] text-[10px] md:text-xs font-bold tracking-[0.1em] uppercase mb-2">
             Start the conversation
           </span>
 
@@ -87,14 +87,14 @@ export function ContactSection() {
                 value={step === 1 ? message : email}
                 onChange={(e) => step === 1 ? setMessage(e.target.value) : setEmail(e.target.value)}
                 disabled={status === "submitting" || status === "success"}
-                className="w-full bg-white border border-[#e2e8f0] shadow-sm rounded-full pl-6 pr-14 py-4 md:py-5 text-sm md:text-base text-[#111] placeholder:text-[#94a3b8] outline-none focus:border-[#2563eb]/50 focus:ring-4 focus:ring-[#2563eb]/10 transition-all duration-300 disabled:opacity-50"
+                className="w-full bg-white border border-[#e2e8f0] shadow-sm rounded-full pl-6 pr-14 py-4 md:py-5 text-sm md:text-base text-[#111] placeholder:text-[#4b5563] outline-none focus:border-[#2563eb]/50 focus:ring-4 focus:ring-[#2563eb]/10 transition-all duration-300 disabled:opacity-50"
                 required
               />
               <button 
                 type="submit"
                 aria-label="Submit email"
                 disabled={status === "submitting" || status === "success"}
-                className="absolute right-2 md:right-3 top-1/2 -translate-y-1/2 size-8 md:size-10 bg-[#f1f5f9] group-focus-within:bg-[#2563eb] group-focus-within:text-white rounded-full flex items-center justify-center text-[#64748b] group-focus-within:shadow-[0_4px_14px_rgba(37,99,235,0.3)] transition-all duration-300 disabled:opacity-50"
+                className="absolute right-2 md:right-3 top-1/2 -translate-y-1/2 size-8 md:size-10 bg-[#f1f5f9] group-focus-within:bg-[#2563eb] group-focus-within:text-white rounded-full flex items-center justify-center text-[#4b5563] group-focus-within:shadow-[0_4px_14px_rgba(37,99,235,0.3)] transition-all duration-300 disabled:opacity-50"
               >
                 {status === "submitting" ? (
                    <div className="size-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
@@ -104,7 +104,7 @@ export function ContactSection() {
               </button>
             </div>
 
-            <span className={`font-['DM_Sans',sans-serif] text-[10px] md:text-xs tracking-wider font-mono mt-3 mb-8 min-h-[20px] ${status === 'success' ? 'text-green-600 font-bold' : status === 'error' ? 'text-red-500' : 'text-[#94a3b8]'}`}>
+            <span className={`font-['DM_Sans',sans-serif] text-[10px] md:text-xs tracking-wider font-mono mt-3 mb-8 min-h-[20px] ${status === 'success' ? 'text-green-600 font-bold' : status === 'error' ? 'text-red-500' : 'text-[#4b5563]'}`}>
               {status === "success" 
                 ? "Message sent successfully! I'll get back to you soon."
                 : status === "error"
@@ -133,7 +133,7 @@ export function ContactSection() {
             </div>
           </form>
 
-          <div className="mt-12 flex items-center justify-center gap-6 text-[#64748b] font-['DM_Sans',sans-serif] text-xs">
+          <div className="mt-12 flex items-center justify-center gap-6 text-[#4b5563] font-['DM_Sans',sans-serif] text-xs">
             <a href={`mailto:${social.email}`} className="flex items-center gap-2 hover:text-[#2563eb] transition-colors">
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
               {social.email}
@@ -150,7 +150,7 @@ export function ContactSection() {
 
       {/* Copyright */}
       <div className="w-full text-center mt-20 md:mt-24 pb-4 pt-6 border-t border-[#e2e8f0] relative z-10">
-        <p className="font-['DM_Sans',sans-serif] text-[#64748b] text-[11px] md:text-xs">
+        <p className="font-['DM_Sans',sans-serif] text-[#4b5563] text-[11px] md:text-xs">
           © 2026 Santhosh V. All rights reserved.
         </p>
       </div>

@@ -115,7 +115,7 @@ function Group3() {
 function Container() {
   return (
     <div className="absolute inset-[15.38%_21%_-47.69%_2.29%]" data-name="Container">
-      <Image priority fetchPriority="high" alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgCloudTextureMask} fill sizes="100vw" />
+      <Image priority fetchPriority="high" loading="eager" alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgCloudTextureMask} fill sizes="100vw" />
     </div>
   );
 }
@@ -385,7 +385,7 @@ function Container3() {
 function Container5() {
   return (
     <div className="absolute h-[344px] left-[-212px] top-[30px] w-[592px]" data-name="Container">
-      <Image priority fetchPriority="high" alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgCloudTextureMask} fill sizes="100vw" />
+      <Image priority fetchPriority="high" loading="eager" alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgCloudTextureMask} fill sizes="100vw" />
     </div>
   );
 }
@@ -393,7 +393,7 @@ function Container5() {
 function Container6() {
   return (
     <div className="absolute h-[670px] left-[-157px] top-[-52px] w-[1026px]" data-name="Container">
-      <Image priority fetchPriority="high" alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgCloudTextureMask} fill sizes="100vw" />
+      <Image priority fetchPriority="high" loading="eager" alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgCloudTextureMask} fill sizes="100vw" />
     </div>
   );
 }
