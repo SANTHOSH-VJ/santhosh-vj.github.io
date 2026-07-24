@@ -22,7 +22,6 @@ export function Navbar() {
     const lenis = (window as any).lenis;
     
     if (lenis) {
-      // Include all sections in order of appearance
       const order = [
         "home", 
         "about", 
@@ -41,7 +40,6 @@ export function Navbar() {
         const currentScroll = window.scrollY + window.innerHeight / 3;
         let currentIndex = 0;
         
-        // Find current section index
         for (let i = 0; i < order.length; i++) {
           const el = document.getElementById(order[i]);
           if (el && el.offsetTop <= currentScroll) {
@@ -57,15 +55,13 @@ export function Navbar() {
             if (!section) continue;
             
             const targetPos = section.offsetTop - 56;
-            lenis.scrollTo(section, { duration: 0.8, offset: -56 });
+            lenis.scrollTo(section, { duration: 0.3, offset: -56 });
             
-            // Wait until Lenis actually reaches the section (polling)
             await new Promise<void>((resolve) => {
               let attempts = 0;
               const checkScroll = () => {
                 attempts++;
-                // Check if scroll is close enough, or timeout after ~2.5s (150 frames)
-                if (Math.abs(lenis.scroll - targetPos) < 10 || attempts > 150) {
+                if (Math.abs(lenis.scroll - targetPos) < 10 || attempts > 50) {
                   resolve();
                 } else {
                   requestAnimationFrame(checkScroll);
@@ -74,8 +70,7 @@ export function Navbar() {
               requestAnimationFrame(checkScroll);
             });
             
-            // If it's not the final target, pause briefly so the user sees it
-            if (i !== targetIndex) await wait(500);
+            if (i !== targetIndex) await wait(50);
           }
         }
       } else {
