@@ -55,13 +55,13 @@ export function Navbar() {
             if (!section) continue;
             
             const targetPos = section.offsetTop - 56;
-            lenis.scrollTo(section, { duration: 0.3, offset: -56 });
+            lenis.scrollTo(section, { duration: 0.15, offset: -56 });
             
             await new Promise<void>((resolve) => {
               let attempts = 0;
               const checkScroll = () => {
                 attempts++;
-                if (Math.abs(lenis.scroll - targetPos) < 10 || attempts > 50) {
+                if (Math.abs(lenis.scroll - targetPos) < 10 || attempts > 20) {
                   resolve();
                 } else {
                   requestAnimationFrame(checkScroll);
@@ -70,12 +70,12 @@ export function Navbar() {
               requestAnimationFrame(checkScroll);
             });
             
-            if (i !== targetIndex) await wait(50);
+            if (i !== targetIndex) await wait(10);
           }
         }
       } else {
         const el = document.getElementById(target);
-        if (el) lenis.scrollTo(el, { duration: 1.2, offset: -56 });
+        if (el) lenis.scrollTo(el, { duration: 0.8, offset: -56 });
       }
     } else {
       document.getElementById(target)?.scrollIntoView({ behavior: 'smooth' });
