@@ -11,8 +11,6 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("Home");
 
-  const wait = (ms: number) => new Promise(r => setTimeout(r, ms));
-
   const handleNavClick = async (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
     e.nativeEvent.stopImmediatePropagation();
@@ -20,65 +18,12 @@ export function Navbar() {
     
     const target = targetId.replace("#", "");
     const lenis = (window as any).lenis;
+    const el = document.getElementById(target);
     
-    if (lenis) {
-      const order = [
-        "home", 
-        "about", 
-        "orbit", 
-        "skills", 
-        "certifications", 
-        "projects", 
-        "experience", 
-        "how-it-works", 
-        "contact"
-      ];
-      
-      const targetIndex = order.indexOf(target);
-
-      if (targetIndex !== -1) {
-        const currentScroll = window.scrollY + window.innerHeight / 3;
-        let currentIndex = 0;
-        
-        for (let i = 0; i < order.length; i++) {
-          const el = document.getElementById(order[i]);
-          if (el && el.offsetTop <= currentScroll) {
-            currentIndex = i;
-          }
-        }
-
-        if (targetIndex !== currentIndex) {
-          const dir = targetIndex > currentIndex ? 1 : -1;
-          
-          for (let i = currentIndex + dir; dir > 0 ? i <= targetIndex : i >= targetIndex; i += dir) {
-            const section = document.getElementById(order[i]);
-            if (!section) continue;
-            
-            const targetPos = section.offsetTop - 56;
-            lenis.scrollTo(section, { duration: 0.15, offset: -56 });
-            
-            await new Promise<void>((resolve) => {
-              let attempts = 0;
-              const checkScroll = () => {
-                attempts++;
-                if (Math.abs(lenis.scroll - targetPos) < 10 || attempts > 20) {
-                  resolve();
-                } else {
-                  requestAnimationFrame(checkScroll);
-                }
-              };
-              requestAnimationFrame(checkScroll);
-            });
-            
-            if (i !== targetIndex) await wait(10);
-          }
-        }
-      } else {
-        const el = document.getElementById(target);
-        if (el) lenis.scrollTo(el, { duration: 0.8, offset: -56 });
-      }
-    } else {
-      document.getElementById(target)?.scrollIntoView({ behavior: 'smooth' });
+    if (lenis && el) {
+      lenis.scrollTo(el, { duration: 0.6, offset: -56 });
+    } else if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
