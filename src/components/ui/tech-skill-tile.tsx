@@ -5,7 +5,7 @@ export function TechSkillTile({ label, slug, localIcon }: { label: string; slug:
     <div className="bg-white border border-[#ededed] rounded-xl w-[72px] h-[76px] flex flex-col gap-1.5 items-center justify-center px-1.5 hover:shadow-md transition-shadow duration-200">
       <div className="size-5 flex items-center justify-center relative">
         {localIcon ? (
-          <Image src={localIcon} alt={label} fill className="object-contain" />
+          <Image src={localIcon} alt={label} fill sizes="20px" className="object-contain" />
         ) : (
           <img src={`https://api.iconify.design/${slug}.svg`} alt={label} className="w-full h-full object-contain" />
         )}

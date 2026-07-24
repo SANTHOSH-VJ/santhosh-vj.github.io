@@ -39,7 +39,7 @@ export function AboutSection() {
                     src={images.santhoshPortraitSuit}
                     alt="Santhosh V - Cloud & DevOps Engineer Portrait"
                     fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    sizes="80px"
                     className="object-cover object-top"
                   />
                 </div>
@@ -47,7 +47,7 @@ export function AboutSection() {
                 <div className="flex flex-col items-center gap-1">
                   <h3 className="font-sans font-bold text-[#111] text-lg">SANTHOSH V</h3>
                   <p className="font-sans text-[#555] font-medium text-sm">Computer Science Engineering Student</p>
-                  <p className="font-sans text-[#888] text-xs">R.M.D. Engineering College</p>
+                  <p className="font-sans text-[#555] text-xs">R.M.D. Engineering College</p>
 
                   <div className="flex items-center justify-center gap-2 mt-3">
                     <span className="bg-[#eff6ff] text-[#2563eb] border border-[#bfdbfe] text-xs font-semibold px-3 py-1 rounded-full">Cloud Computing</span>
