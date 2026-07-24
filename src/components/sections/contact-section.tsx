@@ -30,7 +30,7 @@ export function ContactSection() {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
+          access_key: "8c164f20-8090-4134-b64a-8c690bf8c754",
           email,
           message,
         }),
