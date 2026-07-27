@@ -48,7 +48,7 @@ function PFramerText1() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="p.framer-text">
       <div className="[word-break:break-word] flex flex-col font-['DM_Sans:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#111] text-[18px] tracking-[-0.36px] w-full" style={{ fontVariationSettings: '"opsz" 14' }}>
-        <p className="leading-[19.8px]">AWS Cloud Foundation</p>
+        <p className="leading-[19.8px]">AWS Certified</p>
       </div>
     </div>
   );
