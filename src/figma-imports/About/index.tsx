@@ -46,7 +46,7 @@ function PFramerText2() {
   return (
     <div className="content-stretch flex flex-col items-center relative shrink-0 w-full" data-name="p.framer-text">
       <div className="[word-break:break-word] flex flex-col font-['DM_Sans:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#111] text-[16px] text-center tracking-[-0.32px] whitespace-nowrap" style={{ fontVariationSettings: '"opsz" 14' }}>
-        <p className="leading-[22.4px]">About me</p>
+        <p className="leading-[22.4px]">A Little About Me</p>
       </div>
     </div>
   );

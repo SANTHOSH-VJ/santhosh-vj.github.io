@@ -1,4 +1,7 @@
+"use client";
+
 import { FadeIn } from "@/components/ui/fade-in";
+import { motion } from "motion/react";
 
 const experiences = [
   {
@@ -40,8 +43,15 @@ export function ExperienceSection() {
 
         {/* Timeline */}
         <div className="relative">
-          {/* Vertical Line */}
-          <div className="absolute left-[7px] md:left-[9px] top-[24px] bottom-0 w-px bg-gradient-to-b from-[#2563eb] to-transparent" />
+          {/* Vertical Line Container */}
+          <div className="absolute left-[7px] md:left-[9px] top-[24px] bottom-0 w-px bg-slate-100 overflow-hidden rounded-full">
+            {/* Animated Flowing Line */}
+            <motion.div 
+              className="w-full h-[40%] bg-gradient-to-b from-transparent via-[#2563eb] to-transparent opacity-80"
+              animate={{ y: ["-100%", "300%"] }}
+              transition={{ repeat: Infinity, duration: 2.5, ease: "linear" }}
+            />
+          </div>
 
           <div className="flex flex-col gap-8 md:gap-12">
             {experiences.map((exp, i) => (
@@ -51,8 +61,16 @@ export function ExperienceSection() {
                 delay={i * 0.1}
                 className="relative pl-10 md:pl-16"
               >
-                {/* Timeline Dot */}
-                <div className="absolute left-[-1px] md:left-[1px] top-[24px] md:top-[28px] w-[17px] h-[17px] md:w-[17px] md:h-[17px] rounded-full bg-[#2563eb] shadow-[0_0_10px_rgba(37,99,235,0.4)] z-10" />
+                {/* Timeline Dot with Pulse */}
+                <div className="absolute left-[-1px] md:left-[1px] top-[24px] md:top-[28px] z-10 flex items-center justify-center">
+                  <div className="w-[17px] h-[17px] md:w-[17px] md:h-[17px] rounded-full bg-[#2563eb] shadow-[0_0_10px_rgba(37,99,235,0.4)] relative">
+                    <motion.div 
+                      className="absolute inset-0 rounded-full bg-[#2563eb]"
+                      animate={{ scale: [1, 1.5, 1], opacity: [0.5, 0, 0.5] }}
+                      transition={{ repeat: Infinity, duration: 2, ease: "easeInOut", delay: i * 0.5 }}
+                    />
+                  </div>
+                </div>
 
                 {/* Card */}
                 <div className="bg-[#f7f7f7] border border-transparent rounded-[30px] p-6 md:p-8 hover:border-[#ededed] transition-colors duration-300">
