@@ -28,10 +28,21 @@ export function Navbar() {
   };
 
   useEffect(() => {
+    let lastScrollY = window.scrollY;
+    
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      const currentScrollY = window.scrollY;
+      setScrolled(currentScrollY > 20);
 
-      const scrollPos = window.scrollY + window.innerHeight / 3;
+      // Hide on scroll down, show on scroll up
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        setIsHidden(true);
+      } else if (currentScrollY < lastScrollY) {
+        setIsHidden(false);
+      }
+      lastScrollY = currentScrollY;
+
+      const scrollPos = currentScrollY + window.innerHeight / 3;
       let current = "Home";
       for (const link of navLinks) {
         const element = document.getElementById(link.toLowerCase());
@@ -41,16 +52,22 @@ export function Navbar() {
       }
       setActiveSection(current);
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const [isHovered, setIsHovered] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
 
   return (
     <>
       {/* Desktop Dynamic Island (Notch) */}
-      <div className="fixed top-0 left-0 right-0 z-50 hidden md:flex justify-center pointer-events-none">
+      <motion.div 
+        className="fixed top-0 left-0 right-0 z-50 hidden md:flex justify-center pointer-events-none"
+        initial={{ y: 0 }}
+        animate={{ y: isHidden ? -100 : 0 }}
+        transition={{ duration: 0.4, ease: "easeInOut" }}
+      >
         <motion.nav
           layout
           transition={{ layout: { type: "spring", stiffness: 35, damping: 25 } }}
@@ -157,11 +174,14 @@ export function Navbar() {
             </AnimatePresence>
           </div>
         </motion.nav>
-      </div>
+      </motion.div>
 
       {/* Mobile Navbar */}
-      <nav
-        className={`md:hidden fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      <motion.nav
+        initial={{ y: 0 }}
+        animate={{ y: isHidden ? -100 : 0 }}
+        transition={{ duration: 0.4, ease: "easeInOut" }}
+        className={`md:hidden fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
           scrolled
             ? "bg-[rgba(10,18,40,0.85)] backdrop-blur-md"
             : "bg-transparent"
@@ -228,7 +248,7 @@ export function Navbar() {
             </motion.div>
           )}
         </AnimatePresence>
-      </nav>
+      </motion.nav>
     </>
   );
 }
