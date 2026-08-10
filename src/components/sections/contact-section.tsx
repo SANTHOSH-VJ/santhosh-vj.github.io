@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ChevronRight } from "lucide-react";
 import { social } from "@/lib/constants";
+import { FadeIn } from "@/components/ui/fade-in";
 
 export function ContactSection() {
   const [step, setStep] = useState<1 | 2>(1);
@@ -61,20 +62,26 @@ export function ContactSection() {
 
       <div className="relative max-w-[1360px] mx-auto px-6 lg:px-10 flex flex-col items-center text-center w-full z-10">
 
-        <span className="font-sans text-[#2563eb] text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase mb-6">
-          Get in Touch
-        </span>
+        <FadeIn direction="up" delay={0.1}>
+          <span className="font-sans text-[#2563eb] text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase mb-6 block">
+            Get in Touch
+          </span>
+        </FadeIn>
 
-        <h2 className="font-sans font-black text-[#111] text-5xl md:text-7xl lg:text-8xl tracking-[-0.04em] leading-[1.1] mb-8 max-w-4xl">
-          Let's Build <br className="hidden md:block" />
-          <span className="text-[#2563eb]">Something.</span>
-        </h2>
+        <FadeIn direction="up" delay={0.2}>
+          <h2 className="font-sans font-black text-[#111] text-5xl md:text-7xl lg:text-8xl tracking-[-0.04em] leading-[1.1] mb-8 max-w-4xl">
+            Let's Build <br className="hidden md:block" />
+            <span className="text-[#2563eb]">Something.</span>
+          </h2>
+        </FadeIn>
 
-        <p className="font-sans text-[#475569] text-sm md:text-base max-w-xl leading-relaxed mb-16">
-          I'm currently open to internships, collaborations, and interesting projects. If you have something worth building, I want to hear about it.
-        </p>
+        <FadeIn direction="up" delay={0.3}>
+          <p className="font-sans text-[#475569] text-sm md:text-base max-w-xl leading-relaxed mb-16 mx-auto">
+            I'm currently open to internships, collaborations, and interesting projects. If you have something worth building, I want to hear about it.
+          </p>
+        </FadeIn>
 
-        <div className="w-full max-w-xl flex flex-col items-center gap-4">
+        <FadeIn direction="up" delay={0.4} className="w-full max-w-xl flex flex-col items-center gap-4 mx-auto">
           <span className="font-sans text-[#4b5563] text-[10px] md:text-xs font-bold tracking-[0.1em] uppercase mb-2">
             Start the conversation
           </span>
@@ -145,7 +152,7 @@ export function ContactSection() {
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect width="4" height="12" x="2" y="9" /><circle cx="4" cy="4" r="2" /></svg>
             </a>
           </div>
-        </div>
+        </FadeIn>
       </div>
 
       {/* Copyright */}

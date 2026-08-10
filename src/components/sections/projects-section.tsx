@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { images } from "@/lib/constants";
 import { ArrowRight } from "lucide-react";
+import { FadeIn } from "@/components/ui/fade-in";
 
 const projects = [
   {
@@ -53,11 +54,15 @@ export function ProjectsSection() {
     <section id="work" className="relative w-full z-10 pb-32 pt-20">
       <div className="max-w-[1360px] mx-auto px-6 lg:px-10 flex flex-col gap-6 md:gap-10">
         {projects.map((p, i) => (
-          <div
+          <FadeIn
             key={i}
-            className="bg-white rounded-[40px] overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.06)] border border-[#ededed]"
+            direction="up"
+            delay={i * 0.1}
           >
-            <div className="flex flex-col lg:flex-row w-full min-h-[400px] lg:min-h-[500px] p-3 gap-3">
+            <div
+              className="bg-white rounded-[40px] overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.06)] border border-[#ededed] group"
+            >
+              <div className="flex flex-col lg:flex-row w-full min-h-[400px] lg:min-h-[500px] p-3 gap-3">
               
               {/* Left: Text Content */}
               <div className="flex flex-col justify-center p-6 lg:pl-12 lg:pr-8 lg:py-12 lg:w-[60%] xl:w-[65%]">
@@ -119,12 +124,13 @@ export function ProjectsSection() {
                   alt={p.title} 
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"
-                  className="object-cover" 
+                  className="object-cover group-hover:scale-[1.03] transition-transform duration-500 ease-out" 
                 />
               </div>
 
             </div>
-          </div>
+            </div>
+          </FadeIn>
         ))}
       </div>
     </section>
