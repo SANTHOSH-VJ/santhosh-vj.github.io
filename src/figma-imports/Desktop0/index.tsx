@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
+import { FadeIn } from "@/components/ui/fade-in";
 import svgPaths from "./svg-nt427q6i2s";
 const imgBadgeAwsCloudPractitioner = "/assets/images/badge-aws-cloud-practitioner.webp";
 const imgBadgeServicenowSystemAdmin = "/assets/images/badge-servicenow-system-admin.webp";
@@ -9,14 +12,16 @@ import { imgDivFramer1K87S } from "./svg-clv0y";
 
 function Headline() {
   return (
-    <div className="flex flex-col gap-3 items-center text-center w-full max-w-[600px] mb-8" data-name="Headline">
-      <h2 className="font-sans font-semibold text-[#111] text-3xl md:text-4xl tracking-tight">
-        Backed by real work.
-      </h2>
-      <p className="font-sans text-[#4b5563] text-sm md:text-base leading-relaxed">
-        A few highlights that reflect the quality, trust, and results behind my work.
-      </p>
-    </div>
+    <FadeIn direction="up" delay={0}>
+      <div className="flex flex-col gap-3 items-center text-center w-full max-w-[600px] mb-8" data-name="Headline">
+        <h2 className="font-sans font-semibold text-[#111] text-3xl md:text-4xl tracking-tight">
+          Backed by real work.
+        </h2>
+        <p className="font-sans text-[#4b5563] text-sm md:text-base leading-relaxed">
+          A few highlights that reflect the quality, trust, and results behind my work.
+        </p>
+      </div>
+    </FadeIn>
   );
 }
 
@@ -459,10 +464,8 @@ function TextWrapper2() {
 function BadgeSlots2() {
   return (
     <div className="content-stretch flex items-start overflow-clip relative shrink-0" data-name="Badge Slots">
-      <div className="h-[51px] relative shrink-0 w-[52px]" data-name="OCI25CAA_s1zpar 1">
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <Image alt="" className="absolute inset-0 size-full object-contain" src={imgBadgeOciArchitectAssociate} fill sizes="100vw" />
-        </div>
+      <div className="relative shrink-0 size-[52px]" data-name="OCI25CAA_s1zpar 1">
+        <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgBadgeOciArchitectAssociate} fill sizes="100vw" unoptimized={true} />
       </div>
     </div>
   );
@@ -548,9 +551,15 @@ function TrustedByMany() {
 function Content() {
   return (
     <div className="content-stretch grid grid-cols-1 md:grid-cols-3 gap-8 items-start justify-center overflow-hidden relative w-full" data-name="Content">
-      <FeaturedTemplate />
-      <TopFreelancer />
-      <TrustedByMany />
+      <FadeIn direction="up" delay={0.1} className="w-full h-full flex flex-col">
+        <FeaturedTemplate />
+      </FadeIn>
+      <FadeIn direction="up" delay={0.2} className="w-full h-full flex flex-col">
+        <TopFreelancer />
+      </FadeIn>
+      <FadeIn direction="up" delay={0.3} className="w-full h-full flex flex-col">
+        <TrustedByMany />
+      </FadeIn>
     </div>
   );
 }
