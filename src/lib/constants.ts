@@ -3,7 +3,7 @@
 
 export const images = {
   santhoshPortraitCasual: "/assets/images/santhosh-portrait-casual.webp",
-  santhoshPortraitSuit: "/assets/images/santhosh-portrait-suit-new.jpg",
+  santhoshPortraitSuit: "/assets/images/santhosh-portrait-suit-new.webp",
   githubProfileBanner: "/assets/images/github-profile-banner.webp",
   landscapePinkClouds: "/assets/images/landscape-pink-clouds.webp",
   projectAwsServerless: "/assets/images/project-aws-serverless.webp",

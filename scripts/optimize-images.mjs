@@ -1,43 +1,61 @@
 import sharp from 'sharp';
-import fs from 'fs/promises';
+import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const imagesDir = path.join(__dirname, '../public/assets/images');
+const imgDir = 'public/assets/images';
 
 async function optimizeImages() {
-  console.log('Scanning for images in', imagesDir);
-  const files = await fs.readdir(imagesDir);
-  
-  for (const file of files) {
-    if (file.endsWith('.png') || file.endsWith('.jpg') || file.endsWith('.jpeg')) {
-      const filePath = path.join(imagesDir, file);
-      const name = path.parse(file).name;
-      const destPath = path.join(imagesDir, `${name}.webp`);
-      
-      console.log(`Processing ${file}...`);
-      
-      let pipeline = sharp(filePath);
-      const metadata = await pipeline.metadata();
-      
-      if (name.includes('abstract-green-waves') || name.includes('yew-tree-branches')) {
-        pipeline = pipeline.resize(300, null, { withoutEnlargement: true });
-      } else if (name.includes('cloud-texture-mask')) {
-        pipeline = pipeline.resize(800, null, { withoutEnlargement: true });
-      } else if (metadata.width > 1200) {
-        pipeline = pipeline.resize(1200, null, { withoutEnlargement: true });
-      }
-
-      await pipeline
-        .webp({ quality: 80, effort: 6 })
-        .toFile(destPath);
-        
-      console.log(`Created ${name}.webp`);
+  try {
+    // Optimize portrait (santhosh-portrait-suit-new.jpg)
+    const portraitInput = path.join(imgDir, 'santhosh-portrait-suit-new.jpg');
+    const portraitOutput = path.join(imgDir, 'santhosh-portrait-suit-new.webp');
+    if (fs.existsSync(portraitInput)) {
+      await sharp(portraitInput)
+        .resize(300, 300, { fit: 'cover' })
+        .webp({ quality: 80 })
+        .toFile(portraitOutput);
+      console.log('Processed portrait to WebP');
     }
+
+    // Optimize cloud-texture-mask.webp (re-compress)
+    const cloudInput = path.join(imgDir, 'cloud-texture-mask.webp');
+    const cloudOutput = path.join(imgDir, 'cloud-texture-mask-opt.webp');
+    if (fs.existsSync(cloudInput)) {
+      await sharp(cloudInput)
+        .webp({ quality: 60 })
+        .toFile(cloudOutput);
+      fs.renameSync(cloudOutput, cloudInput); // overwrite
+      console.log('Optimized cloud-texture-mask.webp');
+    }
+
+    // Optimize yew-tree-branches.webp
+    const yewInput = path.join(imgDir, 'yew-tree-branches.webp');
+    const yewOutput = path.join(imgDir, 'yew-tree-branches-opt.webp');
+    if (fs.existsSync(yewInput)) {
+      await sharp(yewInput)
+        .resize(160, 202)
+        .webp({ quality: 80 })
+        .toFile(yewOutput);
+      fs.renameSync(yewOutput, yewInput); // overwrite
+      console.log('Optimized yew-tree-branches.webp');
+    }
+
+    // Optimize abstract-green-waves.webp
+    const wavesInput = path.join(imgDir, 'abstract-green-waves.webp');
+    const wavesOutput = path.join(imgDir, 'abstract-green-waves-opt.webp');
+    if (fs.existsSync(wavesInput)) {
+      await sharp(wavesInput)
+        .resize(160, 228)
+        .webp({ quality: 80 })
+        .toFile(wavesOutput);
+      fs.renameSync(wavesOutput, wavesInput); // overwrite
+      console.log('Optimized abstract-green-waves.webp');
+    }
+
+    console.log('All images optimized successfully!');
+  } catch (error) {
+    console.error('Error optimizing images:', error);
   }
-  console.log('Image optimization complete!');
 }
 
-optimizeImages().catch(console.error);
+optimizeImages();

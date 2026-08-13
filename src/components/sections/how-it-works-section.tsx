@@ -124,7 +124,7 @@ export function HowItWorksSection() {
           <h2 className="font-sans font-semibold text-[#111] text-3xl md:text-4xl tracking-[-1.5px] mb-4">
             How we'll work together.
           </h2>
-          <p className="font-sans text-[#4b5563] text-sm max-w-[340px] leading-relaxed">
+          <p className="font-sans text-[#374151] text-sm max-w-[340px] leading-relaxed">
             A simple, transparent process designed to keep things clear, efficient, and stress-free from start to finish.
           </p>
         </div>
@@ -152,7 +152,7 @@ export function HowItWorksSection() {
                     </motion.div>
                   </AnimatePresence>
                 </div>
-                <span className="font-sans font-normal text-xs text-[#4b5563] mb-[6px]">
+                <span className="font-sans font-normal text-xs text-[#374151] mb-[6px]">
                   /05
                 </span>
               </div>
@@ -216,16 +216,16 @@ function StepItem({
         className={`p-6 md:p-8 rounded-3xl transition-all duration-700 ease-out flex flex-col gap-4 max-w-[400px] ${
           isActive 
             ? 'bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 scale-100 opacity-100 translate-x-0' 
-            : 'scale-[0.98] opacity-40 translate-x-4 border border-transparent'
+            : 'scale-[0.98] opacity-60 translate-x-4 border border-transparent'
         }`}
       >
         <div className="mb-2">
           {step.icon}
         </div>
-        <h3 className={`font-sans font-medium text-xl tracking-[-0.5px] transition-colors duration-500 ${isActive ? 'text-[#111]' : 'text-[#4b5563]'}`}>
+        <h3 className={`font-sans font-medium text-xl tracking-[-0.5px] transition-colors duration-500 ${isActive ? 'text-[#111]' : 'text-[#374151]'}`}>
           {step.title}
         </h3>
-        <p className="font-sans text-[#4b5563] text-sm leading-relaxed">
+        <p className="font-sans text-[#374151] text-sm leading-relaxed">
           {step.desc}
         </p>
       </motion.div>
