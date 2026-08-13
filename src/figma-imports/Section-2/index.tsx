@@ -7,11 +7,13 @@ const imgCloudTextureMask = "/assets/images/cloud-texture-mask.webp";
 function Heading() {
   return (
     <FadeIn direction="up" delay={0.1}>
-      <div className="content-stretch drop-shadow-[0px_4px_1.5px_rgba(0,0,0,0.1),0px_10px_4px_rgba(0,0,0,0.04)] flex flex-col items-start w-fit relative z-10">
-        <h1 className="[word-break:break-word] flex flex-col font-mono font-extrabold justify-center leading-[0] not-italic relative text-[32px] md:text-[40px] text-white tracking-[-1px] whitespace-normal w-fit">
-          <span className="leading-tight md:leading-[46px] mb-0 block">Building The Future with Cloud,</span>
-          <span className="leading-tight md:leading-[46px] mb-0 block">Automation, and Ambition</span>
+      <div className="content-stretch drop-shadow-[0px_4px_1.5px_rgba(0,0,0,0.1),0px_10px_4px_rgba(0,0,0,0.04)] flex flex-col items-start w-fit relative z-10 gap-1 md:gap-2">
+        <h1 className="[word-break:break-word] flex flex-col font-heading font-extrabold justify-center leading-[0] not-italic relative text-[40px] md:text-[56px] text-white tracking-[-1px] whitespace-normal w-fit">
+          <span className="leading-tight md:leading-[60px] mb-0 block">SANTHOSH V</span>
         </h1>
+        <h2 className="[word-break:break-word] flex flex-col font-heading font-bold justify-center leading-[0] not-italic relative text-[24px] md:text-[32px] text-[#bfdbfe] tracking-[-0.5px] whitespace-normal w-fit">
+          <span className="leading-tight md:leading-[36px] mb-0 block">Cloud Engineer & DevOps Specialist</span>
+        </h2>
       </div>
     </FadeIn>
   );
@@ -21,8 +23,9 @@ function SubHeading() {
   return (
     <FadeIn direction="up" delay={0.3}>
       <div className="content-stretch flex flex-col items-start relative shrink-0 w-fit z-10">
-        <div className="[word-break:break-word] flex flex-col font-mono font-medium justify-center leading-[0] not-italic relative shrink-0 text-[20px] text-[rgba(255,255,255,0.85)] tracking-[0.2px] w-fit">
-          <p className="leading-[30px]">Dream, Build, Deploy.</p>
+        <div className="[word-break:break-word] flex flex-col font-heading font-medium justify-center leading-[0] not-italic relative shrink-0 text-[18px] md:text-[20px] text-[rgba(255,255,255,0.85)] tracking-[0.2px] w-fit mt-3">
+          <p className="leading-[28px] md:leading-[30px] max-w-xl">Building the Future with Cloud, Automation & Ambition</p>
+          <p className="leading-[28px] md:leading-[30px] max-w-xl mt-1">Dream. Build. Deploy.</p>
         </div>
       </div>
     </FadeIn>
@@ -35,13 +38,13 @@ function Buttons() {
       <div className="content-stretch flex flex-wrap sm:flex-nowrap gap-[16px] items-center relative w-fit z-10 pt-[16px]">
         <a href="#projects" className="bg-gradient-to-r content-stretch flex flex-col from-[#2563eb] items-center justify-center px-[28px] py-[12px] relative rounded-[9999px] shrink-0 to-[#3b82f6] cursor-pointer hover:shadow-lg hover:scale-105 transition-all duration-300">
           <div className="absolute bg-[rgba(255,255,255,0)] inset-0 rounded-[9999px] shadow-[0px_10px_15px_-3px_rgba(37,99,235,0.4),0px_4px_6px_-4px_rgba(37,99,235,0.4)]" />
-          <div className="[word-break:break-word] flex flex-col font-mono font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-center text-white w-[112.005px]">
+          <div className="[word-break:break-word] flex flex-col font-heading font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-center text-white w-[112.005px]">
             <p className="leading-[24px]">View My Work</p>
           </div>
         </a>
         <a href="/Santhosh_Resume.pdf" download="Santhosh_Resume.pdf" className="backdrop-blur-[6px] bg-[rgba(255,255,255,0.12)] content-stretch flex flex-col items-center justify-center px-[28px] py-[12px] relative rounded-[9999px] shrink-0 hover:bg-[rgba(255,255,255,0.2)] transition-colors hover:scale-105 cursor-pointer">
           <div aria-hidden className="absolute border border-[rgba(255,255,255,0.3)] border-solid inset-0 pointer-events-none rounded-[9999px]" />
-          <div className="[word-break:break-word] flex flex-col font-mono font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-center text-white tracking-[0.0313px] whitespace-nowrap">
+          <div className="[word-break:break-word] flex flex-col font-heading font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-center text-white tracking-[0.0313px] whitespace-nowrap">
             <p className="leading-[24px]">Download Resume</p>
           </div>
         </a>

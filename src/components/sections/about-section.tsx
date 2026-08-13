@@ -26,7 +26,7 @@ export function AboutSection() {
                 <span className="font-sans font-bold text-[#475569] text-[11px] tracking-widest uppercase">About me</span>
               </div>
               <h2 className="font-sans font-bold text-[#111] text-3xl md:text-4xl tracking-[-0.03em] leading-[1.15]">
-                Building systems that last.
+                Building systems that last as a Cloud & DevOps Engineer.
               </h2>
             </div>
 
