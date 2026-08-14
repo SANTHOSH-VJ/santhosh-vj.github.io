@@ -58,6 +58,7 @@ export function ProjectsSection() {
             key={i}
             direction="up"
             delay={i * 0.1}
+            once={false}
           >
             <div
               className="bg-white rounded-[40px] overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.06)] border border-[#ededed] group"
@@ -123,6 +124,7 @@ export function ProjectsSection() {
                   src={p.img} 
                   alt={p.title} 
                   fill
+                  priority={true}
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   className="object-cover group-hover:scale-[1.03] transition-transform duration-500 ease-out" 
                 />

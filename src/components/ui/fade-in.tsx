@@ -7,9 +7,10 @@ interface FadeInProps extends HTMLMotionProps<"div"> {
   children: React.ReactNode;
   delay?: number;
   direction?: "left" | "right" | "up" | "down" | "none";
+  once?: boolean;
 }
 
-export function FadeIn({ children, delay = 0, direction = "none", className, ...props }: FadeInProps) {
+export function FadeIn({ children, delay = 0, direction = "none", once = true, className, ...props }: FadeInProps) {
   const directions = {
     left: { x: -30, y: 0 },
     right: { x: 30, y: 0 },
@@ -25,7 +26,7 @@ export function FadeIn({ children, delay = 0, direction = "none", className, ...
     <motion.div
       initial={initial}
       whileInView={whileInView}
-      viewport={{ once: true }}
+      viewport={{ once }}
       transition={{ duration: 0.6, delay }}
       className={className}
       {...props}

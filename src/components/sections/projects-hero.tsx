@@ -62,7 +62,7 @@ export function ProjectsHero() {
   return (
     <section
       ref={sectionRef}
-      className="sticky top-0 h-[80svh] md:h-[100svh] overflow-hidden z-0 flex items-center justify-center"
+      className="sticky top-0 h-[100dvh] overflow-hidden z-0 flex items-center justify-center"
     >
       {/* Background image stays fixed in place and full brightness */}
       <div className="absolute inset-0 z-0">
@@ -84,11 +84,11 @@ export function ProjectsHero() {
           opacity: textOpacity,
         }}
       >
-        <div className="flex flex-col items-center gap-4">
-          <h2 className="font-sans font-bold text-[#111] text-4xl md:text-6xl tracking-tight leading-tight">
+        <div className="flex flex-col items-center gap-4 drop-shadow-xl">
+          <h2 className="font-sans font-extrabold text-black text-4xl md:text-6xl tracking-tight leading-tight drop-shadow-sm">
             Real projects built in the cloud.
           </h2>
-          <p className="font-sans text-[#333] font-medium text-sm md:text-base max-w-lg leading-relaxed">
+          <p className="font-sans text-black font-semibold text-sm md:text-base max-w-lg leading-relaxed drop-shadow-sm">
             A collection of cloud, DevOps, and full-stack projects showcasing scalable architectures, automation workflows, and practical engineering solutions.
           </p>
         </div>

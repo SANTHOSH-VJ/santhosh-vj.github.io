@@ -12,11 +12,15 @@ export function TechnologiesSection() {
   const programmingSkills: Skill[] = [
     { label: "Java", slug: "logos:java" },
     { label: "Python", slug: "logos:python" },
+    { label: "C", slug: "logos:c" },
+    { label: "C++", slug: "logos:c-plusplus" },
     { label: "SQL", slug: "logos:mysql" },
   ];
 
   const cloudSkills: Skill[] = [
     { label: "AWS", slug: "logos:aws" },
+    { label: "Azure", slug: "logos:microsoft-azure" },
+    { label: "Google Cloud", slug: "logos:google-cloud" },
     { label: "Terraform", slug: "logos:terraform-icon" },
     { label: "Docker", slug: "logos:docker-icon" },
     { label: "Kubernetes", slug: "logos:kubernetes" },
@@ -30,6 +34,8 @@ export function TechnologiesSection() {
     { label: "GitHub", slug: "logos:github-icon" },
     { label: "Postman", slug: "logos:postman-icon" },
     { label: "Supabase", slug: "logos:supabase-icon" },
+    { label: "Firebase", slug: "logos:firebase" },
+    { label: "Redis", slug: "logos:redis" },
   ];
 
   const aiSkills: Skill[] = [
