@@ -97,6 +97,9 @@ export const metadata: Metadata = {
       "msvalidate.01": "2B4788D47C03A62F7FD43186A3200FE3",
     }
   },
+  other: {
+    "thumbnail": "https://santhosh-vj.github.io/og-image.jpg"
+  }
 };
 
 export default function RootLayout({
@@ -115,6 +118,23 @@ export default function RootLayout({
             {children}
           </LenisProvider>
         </div>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Santhosh V",
+              url: "https://santhosh-vj.github.io",
+              image: "https://santhosh-vj.github.io/og-image.jpg",
+              jobTitle: "Cloud Engineer & DevOps Specialist",
+              worksFor: {
+                "@type": "Organization",
+                name: "Cloud & DevOps"
+              }
+            })
+          }}
+        />
       </body>
     </html>
   );
