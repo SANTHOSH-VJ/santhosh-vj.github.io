@@ -27,7 +27,6 @@ export default function Home() {
               "givenName": "Santhosh",
               "jobTitle": ["Cloud Engineer", "DevOps Engineer", "Software Engineer"],
               "url": "https://santhosh-vj.github.io",
-              "image": "https://santhosh-vj.github.io/assets/images/santhosh-portrait-casual.png",
               "alumniOf": {
                 "@type": "CollegeOrUniversity",
                 "name": "R.M.D Engineering College"

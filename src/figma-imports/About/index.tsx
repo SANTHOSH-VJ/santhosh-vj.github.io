@@ -1,8 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import svgPaths from "./svg-sqycjev8l6";
-const imgAbstractGreenWaves = "/assets/images/abstract-green-waves.webp";
-const imgYewTreeBranches = "/assets/images/yew-tree-branches.webp";
 import { imgBlur } from "./svg-3dold";
 
 function PFramerText() {
@@ -561,9 +559,6 @@ function GRufuRrPsKhXiw8Rc4UuwKbiIoUWebp() {
   return (
     <div className="h-[99.997px] overflow-clip relative rounded-[12px] shrink-0 w-full" data-name="gRUFURrPSKhXiw8rc4UUWKbiIoU.webp">
       <div aria-hidden className="absolute inset-0 pointer-events-none rounded-[12px]">
-        <div className="absolute inset-0 overflow-hidden rounded-[12px]">
-          <Image alt="" className="absolute inset-0 size-full object-cover" src={imgAbstractGreenWaves} fill sizes="80px" />
-        </div>
         <div className="absolute bg-[#c925d1] inset-0 rounded-[12px]" />
       </div>
       <div className="absolute flex inset-[18.81%_6.6%_9.59%_13.93%] items-center justify-center" style={{ containerType: "size" }}>
@@ -591,9 +586,6 @@ function GRufuRrPsKhXiw8Rc4UuwKbiIoUWebp1() {
   return (
     <div className="h-[100.006px] overflow-clip relative rounded-[12px] shrink-0 w-full" data-name="gRUFURrPSKhXiw8rc4UUWKbiIoU.webp">
       <div aria-hidden className="absolute inset-0 pointer-events-none rounded-[12px]">
-        <div className="absolute inset-0 overflow-hidden rounded-[12px]">
-          <Image alt="" className="absolute inset-0 size-full object-cover" src={imgAbstractGreenWaves} fill sizes="80px" />
-        </div>
         <div className="absolute bg-[#c925d1] inset-0 rounded-[12px]" />
       </div>
       <div className="absolute flex inset-[16.97%_15.12%_11.45%_5.85%] items-center justify-center" style={{ containerType: "size" }}>
@@ -634,9 +626,6 @@ function W14MEvxhiFsxPXqsaySvrmOl63WWebp() {
   return (
     <div className="h-[99.998px] overflow-clip relative rounded-[12px] shrink-0 w-[79.997px]" data-name="W14MEvxhiFsxPXqsaySVRMOl63w.webp">
       <div aria-hidden className="absolute inset-0 pointer-events-none rounded-[12px]">
-        <div className="absolute inset-0 overflow-hidden rounded-[12px]">
-          <Image alt="" className="absolute inset-0 size-full object-cover" src={imgYewTreeBranches} fill sizes="80px" />
-        </div>
         <div className="absolute bg-[#e7157b] inset-0 rounded-[12px]" />
       </div>
       <div className="absolute flex inset-[16.71%_6.8%_19.66%_5.78%] items-center justify-center" style={{ containerType: "size" }}>
@@ -664,9 +653,6 @@ function W14MEvxhiFsxPXqsaySvrmOl63WWebp1() {
   return (
     <div className="h-[100.004px] overflow-clip relative rounded-[12px] shrink-0 w-full" data-name="W14MEvxhiFsxPXqsaySVRMOl63w.webp">
       <div aria-hidden className="absolute inset-0 pointer-events-none rounded-[12px]">
-        <div className="absolute inset-0 overflow-hidden rounded-[12px]">
-          <Image alt="" className="absolute inset-0 size-full object-cover" src={imgYewTreeBranches} fill sizes="80px" />
-        </div>
         <div className="absolute bg-[#e7157b] inset-0 rounded-[12px]" />
       </div>
       <div className="absolute flex inset-[17.57%_5.69%_18.8%_7.44%] items-center justify-center" style={{ containerType: "size" }}>
