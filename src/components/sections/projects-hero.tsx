@@ -62,7 +62,7 @@ export function ProjectsHero() {
   return (
     <section
       ref={sectionRef}
-      className="sticky top-0 h-[100dvh] overflow-hidden z-0 flex items-center justify-center"
+      className="sticky top-[-10vh] h-[120vh] overflow-hidden z-0 flex items-center justify-center"
     >
       {/* Background image stays fixed in place and full brightness */}
       <div className="absolute inset-0 z-0">
