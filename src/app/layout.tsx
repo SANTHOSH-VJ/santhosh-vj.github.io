@@ -87,11 +87,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.png",
-    apple: "/apple-touch-icon.png",
-  },
   verification: {
     other: {
       "msvalidate.01": "2B4788D47C03A62F7FD43186A3200FE3",
