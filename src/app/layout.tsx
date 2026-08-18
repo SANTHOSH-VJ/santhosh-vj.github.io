@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     siteName: "Santhosh V Portfolio",
     images: [
       {
-        url: "/og-image.jpg", 
+        url: "https://santhosh-vj.github.io/og-image.jpg", 
         width: 1200,
         height: 630,
         alt: "Santhosh V - Cloud & DevOps Engineer Portfolio",
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Santhosh V — Cloud Engineer & DevOps Specialist",
     description: "Building reliable cloud-native applications, CI/CD pipelines, and scalable infrastructure.",
-    images: ["/og-image.jpg"],
+    images: ["https://santhosh-vj.github.io/og-image.jpg"],
   },
   robots: {
     index: true,
