@@ -21,7 +21,7 @@ export function Navbar() {
     const el = document.getElementById(target);
     
     if (lenis && el) {
-      lenis.scrollTo(el, { duration: 0.6, offset: -56 });
+      lenis.scrollTo(el, { duration: 1.5, offset: -56 });
     } else if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
     }

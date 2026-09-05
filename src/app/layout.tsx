@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     default: "Santhosh V — Cloud Engineer & DevOps Specialist",
     template: "%s | Santhosh V"
   },
-  description: "Portfolio of Santhosh V, a Cloud Engineer specializing in AWS, DevOps, cloud computing, and scalable backend applications. Graduate of R.M.D.",
+  description: "Santhosh V is a Computer Science and Engineering student and Cloud Engineer specializing in AWS, cloud computing, DevOps, and full-stack development at R.M.D. Engineering College.",
   keywords: [
     "Santhosh V",
     "santhosh v",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Santhosh V — Cloud Engineer & DevOps Specialist",
-    description: "Building reliable cloud-native applications, CI/CD pipelines, and scalable infrastructure. Explore my projects and certifications.",
+    description: "Santhosh V is a Computer Science and Engineering student and Cloud Engineer specializing in AWS, cloud computing, DevOps, and full-stack development at R.M.D. Engineering College.",
     url: "https://santhosh-vj.github.io",
     siteName: "Santhosh V Portfolio",
     images: [
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Santhosh V — Cloud Engineer & DevOps Specialist",
-    description: "Building reliable cloud-native applications, CI/CD pipelines, and scalable infrastructure.",
+    description: "Santhosh V is a Computer Science and Engineering student and Cloud Engineer specializing in AWS, cloud computing, DevOps, and full-stack development.",
     images: ["https://santhosh-vj.github.io/og-image.jpg"],
   },
   robots: {
@@ -118,15 +118,39 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Person",
-              name: "Santhosh V",
-              url: "https://santhosh-vj.github.io",
-              image: "https://santhosh-vj.github.io/og-image.jpg",
-              jobTitle: "Cloud Engineer & DevOps Specialist",
-              worksFor: {
-                "@type": "Organization",
-                name: "Cloud & DevOps"
-              }
+              "@graph": [
+                {
+                  "@type": "WebSite",
+                  "@id": "https://santhosh-vj.github.io/#website",
+                  "url": "https://santhosh-vj.github.io",
+                  "name": "Santhosh V Portfolio"
+                },
+                {
+                  "@type": "Person",
+                  "@id": "https://santhosh-vj.github.io/#person",
+                  "name": "Santhosh V",
+                  "url": "https://santhosh-vj.github.io",
+                  "image": "https://santhosh-vj.github.io/og-image.jpg",
+                  "jobTitle": "Computer Science and Engineering Student",
+                  "description": "Santhosh V is a Computer Science and Engineering student specializing in cloud computing, AWS, DevOps, and full-stack development.",
+                  "affiliation": {
+                    "@type": "CollegeOrUniversity",
+                    "name": "R.M.D. Engineering College"
+                  },
+                  "sameAs": [
+                    "https://www.linkedin.com/in/vjsanthosh/",
+                    "https://github.com/SANTHOSH-VJ"
+                  ],
+                  "knowsAbout": [
+                    "AWS",
+                    "Cloud Computing",
+                    "DevOps",
+                    "Docker",
+                    "CI/CD",
+                    "Serverless Architecture"
+                  ]
+                }
+              ]
             })
           }}
         />
