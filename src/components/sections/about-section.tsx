@@ -75,7 +75,8 @@ export function AboutSection() {
           >
             <div className="font-sans text-[#4b5563] text-[13px] md:text-sm lg:text-base leading-[1.6] md:leading-[1.7]">
               <p className="text-base md:text-lg lg:text-xl text-[#111] font-medium leading-[1.4] tracking-[-0.01em] mb-4 lg:mb-5">
-                I'm Santhosh V, a Computer Science Engineering student specializing in Cloud Computing at R.M.D. Engineering College. I enjoy building scalable cloud applications, automating infrastructure with DevOps practices, and developing reliable backend systems using AWS and modern web technologies.
+                <span className="font-bold block mb-1">Who is Santhosh V?</span>
+                I am a Computer Science Engineering student specializing in Cloud Computing at R.M.D. Engineering College. I enjoy building scalable cloud applications, automating infrastructure with DevOps practices, and developing reliable backend systems using AWS and modern web technologies.
               </p>
 
               <p className="mb-3 lg:mb-4">
