@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import { FadeIn } from "@/components/ui/fade-in";
+import { getLocalIconPath, getIconifyApiUrl } from "@/lib/icons";
 
 const imgCloudTextureMask = "/assets/images/cloud-texture-mask.webp";
 
@@ -54,13 +57,27 @@ function Buttons() {
 }
 
 function FloatingIcon({ icon, label, className, delayClass = "", iconSize = "size-[24px]" }: { icon: string, label?: string, className: string, delayClass?: string, iconSize?: string }) {
+  const iconSrc = getLocalIconPath(icon);
+  const fallbackApi = getIconifyApiUrl(icon);
+
   return (
     <div className={`hidden lg:flex absolute items-center justify-center z-10 ${className} ${delayClass}`}>
       <div className="flex-none hover:scale-105 transition-transform duration-300">
         <div className="bg-[rgba(255,255,255,0.16)] backdrop-blur-sm content-stretch flex gap-[10px] h-[46px] items-center px-[18px] relative rounded-full">
           <div aria-hidden className="absolute border border-[rgba(255,255,255,0.35)] border-solid inset-0 pointer-events-none rounded-full shadow-[0px_8px_24px_0px_rgba(13,26,51,0.18)]" />
           <div className={`relative shrink-0 flex items-center justify-center ${iconSize}`}>
-             <img src={`https://api.iconify.design/${icon}.svg`} alt={label || "icon"} className="w-full h-full object-contain drop-shadow-sm" />
+             <img
+               src={iconSrc}
+               alt={label || "icon"}
+               className="w-full h-full object-contain drop-shadow-sm"
+               onError={(e) => {
+                 const target = e.currentTarget;
+                 if (target.src !== fallbackApi) {
+                   target.onerror = null;
+                   target.src = fallbackApi;
+                 }
+               }}
+             />
           </div>
           {label && (
             <div className="relative shrink-0 pt-[1px]">

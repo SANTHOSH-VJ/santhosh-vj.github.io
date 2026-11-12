@@ -87,6 +87,13 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.png", type: "image/png" },
+    ],
+    apple: "/favicon.png",
+  },
   verification: {
     other: {
       "msvalidate.01": "2B4788D47C03A62F7FD43186A3200FE3",
